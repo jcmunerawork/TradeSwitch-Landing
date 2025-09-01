@@ -1,0 +1,126 @@
+<div class="landing d-flex pb-32 flex-col items-center">
+  <section class="banner d-flex items-center justify-center">
+    <div class="banner-actions d-flex flex-col items-start justify-center">
+      <h1 class="bannerTitle worksTitle">
+        How it works <span>A-Z GUIDE</span>
+      </h1>
+      <div class="bannerButtons d-flex items-center">
+        <button class="btn-primary regularText">Sign up</button>
+        <button class="btn-secondary regularText">
+          Download Chrome Extension
+        </button>
+      </div>
+    </div>
+
+    <div
+      class="banner-main d-flex flex-col justify-center items-center regularText bannerSubtitle color-text-gray"
+    >
+      <figure>
+        <img src="assets/img/landing/discover-2.webp" alt="" />
+      </figure>
+    </div>
+  </section>
+
+  <section class="works-compare d-flex items-center justify-center">
+    <div class="works-item d-flex flex-col items-start">
+      <h3 class="subtitle color-background">
+        <span class="color-soft-red">No</span> Trade Switch
+      </h3>
+      <figure style="margin-left: -1.5rem">
+        <img src="assets/img/works/negative-card.webp" alt="" />
+      </figure>
+    </div>
+    <div class="works-item d-flex flex-col items-start">
+      <h3 class="subtitle color-background">
+        <span class="color-primary">With</span> Trade Switch
+      </h3>
+      <figure>
+        <img src="assets/img/works/positive-card.webp" alt="" />
+      </figure>
+    </div>
+  </section>
+
+  <section class="work-psychology d-flex flex-col items-center">
+    <div class="work-psychology-title d-flex flex-col items-center">
+      <h2 class="worksTitle color-background">The Psychology</h2>
+      <p class="subtitle color-text-gray">
+        What every Trader struggles with that we solve with just 1 simple line
+        of code:
+      </p>
+    </div>
+    <div class="work-psychology-content d-flex flex-col items-start p-24">
+      <p class="color-text-gray"># Trading Rule Check</p>
+      <div>
+        <p class="color-background">
+          <span class="color-secondary-500">if</span> emotion_triggered():
+        </p>
+        <p class="color-background" style="text-indent: 2rem">
+          prevent_trade(
+          <span class="color-primary"
+            >"Blocked: Emotional decision detected"</span
+          >)
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="landing-works d-flex flex-col items-center">
+    <div class="landing-works-titles d-flex flex-col items-center">
+      <h2 class="worksTitle color-background">The Tech</h2>
+      <p class="subtitle color-text-gray">
+        Trade Manager allows you to set your trading strategy and helps you
+        follow it. You <span class="color-secondary-500">ALWAYS</span> have the
+        freedom to turn off your trading strategy at any time.
+      </p>
+    </div>
+    <div class="landing-works-content d-flex justify-between items-center">
+      @for (step of landingSteps; track $index) {
+      <div class="landing-works-step d-flex flex-col items-center">
+        <h3 class="stepTitle subtitle color-secondary-500 mb-20">
+          {{ step.title }}
+        </h3>
+        <figure>
+          <img [src]="step.img" alt="" />
+        </figure>
+      </div>
+      }
+    </div>
+    <div class="landing-works-buttons d-flex items-center">
+      <button class="btn-primary regularText">Sign up</button>
+      <button class="btn-secondary regularText">Learn more</button>
+    </div>
+  </section>
+  <section class="strategy d-flex flex-col items-center">
+    <h2 class="strategyTitle worksTitle color-background">The Strategy</h2>
+    <div class="strategy-content d-flex flex-col items-start">
+      <div class="strategy-item d-flex items-center justify-between">
+        <div class="item-text d-flex flex-col items-start">
+          <h4 class="color-secondary-500 subtitle">Set your strategy</h4>
+          <ol class="color-background regularText">
+            <li>Select which rules you want to add to your Strategy</li>
+            <li><b>Customize</b> the rules to your preferences</li>
+            <li>Save your settings</li>
+            <li><b>Start Trading </b></li>
+          </ol>
+          <div class="landing-signUp-buttons d-flex items-center">
+            <button class="btn-secondary regularText">Sign up</button>
+          </div>
+        </div>
+        <figure>
+          <img src="assets/img/landing/discover-1.webp" alt="" />
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="landing-signUp d-flex flex-col items-center">
+    <h2 class="worksTitle color-background">
+      Get started in just under
+      <span class="color-secondary-500">5 minutes</span>
+    </h2>
+
+    <div class="landing-signUp-buttons d-flex items-center">
+      <button class="btn-primary regularText">Sign up</button>
+    </div>
+  </section>
+</div>

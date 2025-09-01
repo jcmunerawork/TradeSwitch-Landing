@@ -12,6 +12,7 @@ $gray: #848a92;
 $textGray: #767676;
 $active-gray: #b3b3b3;
 $yellow: #edab42;
+$softRed: #ff7b7d;
 
 // Primary Palette (Lime Spark)
 $primary-100: #eaffc7;
@@ -69,6 +70,7 @@ $colors: (
   "light-gray": $light-gray,
   "text-gray": $textGray,
   "yellow": $yellow,
+  "soft-red": $softRed,
 );
 
 // Function to get color by name
