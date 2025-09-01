@@ -1,0 +1,118 @@
+<div class="landing d-flex pb-32 flex-col items-center">
+  <section class="banner d-flex flex-col items-center justify-center">
+    <div class="banner-actions d-flex flex-col items-center justify-center">
+      <h1 class="bannerTitle">Trade with rules, <span>not emotions</span></h1>
+      <div class="bannerButtons d-flex items-center">
+        <button class="btn-primary regularText">Sign up</button>
+        <button class="btn-secondary regularText">
+          Download Chrome Extension
+        </button>
+      </div>
+    </div>
+
+    <div
+      class="banner-main d-flex flex-col justify-center items-center regularText bannerSubtitle color-text-gray"
+    >
+      <p>
+        Users on average see an
+        <span class="color-background">increase of 35% in profitability</span>
+        using TradeSwitch.
+      </p>
+      <figure>
+        <img src="assets/img/landing/landing-banner.webp" alt="" />
+      </figure>
+    </div>
+  </section>
+  <section class="landing-works d-flex flex-col items-center">
+    <div class="landing-works-titles d-flex flex-col">
+      <h2 class="worksTitle color-background">How it Works</h2>
+      <p class="subtitle color-text-gray">
+        Get started in just under <span class="color-primary">5 minutes</span>
+      </p>
+    </div>
+    <div class="landing-works-content d-flex justify-between items-center">
+      @for (step of landingSteps; track $index) {
+      <div class="landing-works-step d-flex flex-col items-center">
+        <h3 class="stepTitle subtitle color-secondary-500 mb-20">
+          {{ step.title }}
+        </h3>
+        <figure>
+          <img [src]="step.img" alt="" />
+        </figure>
+      </div>
+      }
+    </div>
+    <div class="landing-works-buttons d-flex items-center">
+      <button class="btn-primary regularText">Sign up</button>
+      <button class="btn-secondary regularText">Learn more</button>
+    </div>
+  </section>
+  <section class="landing-discover d-flex flex-col items-center">
+    <h2 class="discoverTitle worksTitle color-background">
+      Discover Your Dashboard
+    </h2>
+    <div class="discover-content d-flex flex-col items-start">
+      @for (item of discoverContent; track $index) {
+      <div class="discover-item d-flex items-center justify-between">
+        <div class="item-text d-flex flex-col items-start">
+          <h4 class="color-secondary-500 subtitle">{{ item.title }}</h4>
+          <p class="color-background regularText">{{ item.description }}</p>
+        </div>
+        <figure>
+          <img [src]="item.img" alt="" />
+        </figure>
+      </div>
+      }
+    </div>
+  </section>
+  <section class="landing-signUp d-flex flex-col items-center">
+    <h2 class="worksTitle color-background">
+      Sign Up today and join +2500 traders already using
+      <span class="color-primary">TradeSwitch</span>
+    </h2>
+
+    <div class="landing-signUp-buttons d-flex items-center">
+      <button class="btn-primary regularText">Sign up</button>
+    </div>
+  </section>
+
+  <section class="landing-testimonials d-flex flex-col items-center">
+    <div class="landing-testimonials-title d-flex flex-col items-center">
+      <h3 class="worksTitle color-background">Testimonials</h3>
+      <p class="color-text-gray subtitle">
+        Don't just hear it from us, hear it from real users.
+      </p>
+    </div>
+    <div class="landing-testimonials-content d-flex items-center">
+      @for (testimonial of testimonialData; track $index) {
+      <div
+        class="landing-testimonial-item d-flex flex-col justify-center items-start"
+      >
+        <div class="testimonial-avatar-data d-flex justify-end">
+          <figure>
+            <img [src]="testimonial.avatar" alt="" />
+          </figure>
+          <div class="testimonial-avatar-rating">
+            @for (item of [].constructor(testimonial.rating); track $index) {
+            <ng-container>
+              <span
+                class="icon-star color-yellow px-2"
+                [ngClass]="{ filled: $index < testimonial.rating }"
+              ></span>
+            </ng-container>
+            }
+          </div>
+        </div>
+        <p class="color-background testimonialText">{{ testimonial.text }}</p>
+        <div class="testimonial-user d-flex items-center justify-between">
+          <div class="avatar-info d-flex flex-col items-start">
+            <h4 class="color-background smallText">{{ testimonial.name }}</h4>
+            <p class="color-text-gray tinyText">{{ testimonial.position }}</p>
+          </div>
+          <span class="icon-like color-secondary-600"></span>
+        </div>
+      </div>
+      }
+    </div>
+  </section>
+</div>

@@ -1,0 +1,132 @@
+// TYPOGRAPHY.SCSS
+
+@font-face {
+  font-family: "SF Pro Display";
+  src: url("./fonts/SF_pro/SFPRODISPLAYREGULAR.OTF") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "SF Pro Display";
+  src: url("./fonts/SF_pro/SFPRODISPLAYBOLD.OTF") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "SF Pro Display";
+  src: url("./fonts/SF_pro/SFPRODISPLAYMEDIUM.OTF") format("opentype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+// Color Imports
+$font-interface: "SF Pro", "system-ui", sans-serif;
+
+// Font Weights
+$weight-bold: 700; // Bold
+$weight-medium: 500; // Medium
+$weight-regular: 400; // Regular
+
+.logoTitle {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-family: $font-interface;
+  font-size: clamp(1.1rem, 2vw, 1.4rem);
+  font-style: normal;
+  font-weight: $weight-bold;
+  line-height: 22.264px;
+  letter-spacing: 0.02em;
+}
+
+.regularText {
+  font-family: $font-interface !important;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 14px;
+}
+
+.testimonialText {
+  font-family: $font-interface !important;
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 400;
+}
+
+.smallText {
+  font-family: $font-interface !important;
+  font-size: 0.875rem;
+  font-style: normal;
+  font-weight: 400;
+}
+
+.tinyText {
+  font-family: $font-interface !important;
+  font-size: 0.625rem;
+  font-style: normal;
+  font-weight: 400;
+}
+
+.inputText {
+  font-family: $font-interface;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 14px;
+}
+
+.titleText {
+  font-family: $font-interface;
+  font-size: 3rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.3915rem;
+  letter-spacing: -0.02719rem;
+}
+
+.subtitle {
+  font-family: $font-interface;
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.3915rem;
+  letter-spacing: -0.02719rem;
+}
+
+.secondTitle {
+  font-family: $font-interface;
+  font-size: 2.5rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.3915rem;
+  letter-spacing: -0.02719rem;
+}
+
+.bannerTitle {
+  text-align: center;
+  font-family: $font-interface;
+  font-size: 5rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 4.8125rem;
+  letter-spacing: -0.02719rem;
+}
+
+.bannerSubtitle {
+  font-family: $font-interface;
+  font-size: 1.875rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 2.5rem;
+}
+
+.worksTitle {
+  font-family: $font-interface;
+  font-size: 3rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 3.75rem; /* 125% */
+  letter-spacing: -0.02719rem;
+}

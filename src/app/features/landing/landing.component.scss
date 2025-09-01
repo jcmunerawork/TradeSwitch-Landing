@@ -1,0 +1,159 @@
+.landing {
+  gap: 64px;
+  align-self: stretch;
+  padding: 8rem 10rem;
+  .banner {
+    align-self: stretch;
+    gap: 64px;
+    .banner-actions {
+      gap: 1.25rem;
+      .bannerTitle {
+        width: 60%;
+        text-align: center;
+        color: #fff;
+        span {
+          color: #5186e4;
+        }
+      }
+    }
+
+    .banner-main {
+      gap: 2rem;
+      p {
+        text-align: center;
+        width: 80%;
+      }
+      figure {
+        width: 46.875rem;
+        img {
+          width: 100%;
+          height: auto;
+        }
+      }
+    }
+  }
+
+  .landing-signUp-buttons,
+  .landing-works-buttons,
+  .bannerButtons {
+    gap: 0.625rem;
+    button {
+      border-radius: 0.375rem;
+      padding: 0.625rem;
+      font-weight: 500;
+      border: none;
+      cursor: pointer;
+    }
+
+    .btn-primary {
+      color: #222325;
+      background: #9bf526;
+    }
+
+    .btn-secondary {
+      border-radius: 0.375rem;
+      border: 1px solid #9bf526;
+      color: #9bf526;
+      background: rgba(188, 254, 99, 0.1);
+    }
+  }
+
+  .landing-signUp-buttons,
+  .landing-works-buttons {
+    button {
+      width: 11.25rem;
+    }
+  }
+
+  .landing-works {
+    gap: 48px;
+    text-align: center;
+    .landing-works-titles {
+      gap: 0.625rem;
+    }
+  }
+
+  .landing-discover {
+    gap: 48px;
+    .discoverTitle {
+      text-align: center;
+    }
+    .discover-content {
+      gap: 4.375rem;
+      .discover-item {
+        .item-text {
+          gap: 2.25rem;
+          width: 40%;
+          h4,
+          p {
+            line-height: 1.3915rem; /* 139.15% */
+            letter-spacing: -0.02719rem;
+          }
+        }
+      }
+    }
+  }
+
+  .landing-signUp {
+    text-align: center;
+    gap: 3.75rem;
+    h2 {
+      width: 70%;
+    }
+  }
+
+  .landing-testimonials {
+    gap: 48px;
+    width: 100%;
+    .landing-testimonials-title {
+      gap: 0.625rem;
+    }
+    .landing-testimonials-content {
+      gap: 1.5rem;
+      width: 100%;
+      padding-top: 3%;
+      overflow-x: auto;
+      scrollbar-width: none;
+      -ms-overflow-style: none;
+
+      & ::-webkit-scrollbar {
+        display: none;
+      }
+      .landing-testimonial-item {
+        padding: 1.25rem 1.5625rem 2.1875rem 1.5625rem;
+        min-width: 23.39581rem;
+        gap: 2rem;
+        position: relative;
+        border-radius: 1rem;
+        border: 1px solid #434343;
+        background: radial-gradient(
+            circle at top center,
+            rgba(81, 134, 228, 0.1) 0%,
+            rgba(81, 134, 228, 0.01) 50%
+          ),
+          #151516;
+
+        .testimonial-avatar-data {
+          width: 100%;
+          figure {
+            position: absolute;
+            top: -11%;
+            left: 8%;
+            width: 4.7rem;
+            img {
+              width: 100%;
+              height: auto;
+            }
+          }
+        }
+
+        .testimonial-user {
+          width: 100%;
+          span {
+            font-size: 1.5rem;
+          }
+        }
+      }
+    }
+  }
+}

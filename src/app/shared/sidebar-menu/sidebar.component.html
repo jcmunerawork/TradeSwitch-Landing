@@ -1,0 +1,34 @@
+<nav
+  class="sidebar d-flex regularText justify-between items-center"
+  [class.scrolled]="isScrolled"
+>
+  <div class="logo">
+    <img src="assets/logo.png" alt="" />
+  </div>
+
+  <ul class="menu m-0 d-flex items-center">
+    <li class="menu-link">
+      <a routerLink="/how-it-works" routerLinkActive="active">How it works</a>
+    </li>
+
+    <li class="menu-link">
+      <a routerLink="/plans" routerLinkActive="active">Plans</a>
+    </li>
+
+    <li class="menu-link">
+      <a routerLink="/blog" routerLinkActive="active">Blog</a>
+    </li>
+
+    <li class="menu-link">
+      <a routerLink="/faq" routerLinkActive="active">FAQ</a>
+    </li>
+    <li class="menu-link">
+      <a routerLink="/about-us" routerLinkActive="active">About Us</a>
+    </li>
+  </ul>
+
+  <div class="access-buttons d-flex items-center">
+    <button class="access-btn regularText login">Login</button>
+    <button class="access-btn regularText signUp">Sign Up</button>
+  </div>
+</nav>

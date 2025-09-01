@@ -1,0 +1,155 @@
+@use "colors";
+@use "icons";
+@use "typography";
+@use "grids";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+// Custom Checkbox global style
+
+.custom-checkbox input[type="checkbox"] {
+  display: none;
+}
+
+.custom-checkbox .checkmark {
+  display: inline-block;
+  width: 1.125rem;
+  height: 1.125rem;
+  flex-shrink: 0;
+  aspect-ratio: 1/1;
+  background: transparent;
+  border-radius: 0.125rem;
+  border: 1.5px dashed #b3b3b3;
+  position: relative;
+  transition: background 0.2s;
+  vertical-align: middle;
+}
+
+.custom-checkbox input[type="checkbox"]:checked + .checkmark::after {
+  content: "";
+  content: "";
+  position: absolute;
+  left: 6px;
+  top: 4px;
+  width: 0.2rem;
+  height: 0.4rem;
+  border-right: 2px solid #181818;
+  border-bottom: 2px solid #181818;
+  transform: rotate(45deg);
+}
+
+.custom-checkbox input[type="checkbox"]:checked + .checkmark {
+  background: #97ff4b;
+  border: none;
+}
+
+// custom number input
+
+.custom-number-input {
+  width: 60px;
+  width: 4.3125rem;
+  height: 2rem;
+  border-radius: 0.375rem;
+  border: 1px solid #8e8e93;
+  font-weight: 500;
+  background-color: transparent;
+}
+
+.custom-number-input::-webkit-inner-spin-button,
+.custom-number-input::-webkit-outer-spin-button {
+  opacity: 1;
+  filter: invert(90%);
+}
+
+/* Remove spinner arrows on Firefox */
+.custom-number-input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+/* Optional: Add focus effect */
+.custom-number-input:focus {
+  border-color: #67a4f7;
+  box-shadow: 0 0 0 2px rgba(103, 164, 247, 0.2);
+}
+
+.deactivated {
+  color: #b3b3b3;
+}
+
+// custom dropdown
+.icon-chevron {
+  font-size: 30px;
+  margin-right: -7px;
+}
+
+.currency-dropdown {
+  position: relative;
+  display: inline-block;
+  font-family: sans-serif;
+}
+
+.dropdown-toggle {
+  background: transparent;
+  color: #fafafa;
+  border: 1px solid #8e8e93;
+  border-radius: 0 8px 8px 0;
+  border-left: none;
+  cursor: pointer;
+  min-width: 90px;
+}
+
+.currency-flag {
+  width: 18px;
+  height: 18px;
+  margin-right: 8px;
+  border-radius: 50%;
+  box-shadow: 0 0 2px #222;
+  object-fit: cover;
+}
+
+.arrow {
+  margin-left: 10px;
+  font-size: 1rem;
+}
+
+.dropdown-menu {
+  position: absolute;
+  border: 1px solid #8e8e93;
+  border-radius: 8px;
+  margin-top: 2px;
+  min-width: 105px;
+  z-index: 1000;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  max-height: 250px;
+  overflow-y: auto;
+}
+
+.dropdown-item {
+  padding: 8px 14px;
+  color: #fafafa;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.dropdown-item:hover,
+.dropdown-item.selected {
+  background: #313131;
+}
+
+.avatar {
+  width: 2.2rem;
+  height: 2rem;
+  background: #283046;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 0.7rem;
+  font-weight: bold;
+}
