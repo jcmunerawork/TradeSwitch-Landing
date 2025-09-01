@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "Trade-Manager": {
+    "tradeSwitch-Landing": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -22,7 +22,7 @@
             "tsConfig": "tsconfig.app.json",
             "inlineStyleLanguage": "scss",
             "outputPath": {
-              "base": "dist/trade-manager",
+              "base": "dist/tradeSwitch-Landing",
               "browser": "browser",
               "server": "server",
               "media": "assets"
@@ -75,10 +75,10 @@
           "builder": "@angular/build:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "Trade-Manager:build:production"
+              "buildTarget": "TradeSwitch-Landing:build:production"
             },
             "development": {
-              "buildTarget": "Trade-Manager:build:development"
+              "buildTarget": "TradeSwitch-Landing:build:development"
             }
           },
           "defaultConfiguration": "development"
