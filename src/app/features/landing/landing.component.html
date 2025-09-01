@@ -3,7 +3,9 @@
     <div class="banner-actions d-flex flex-col items-center justify-center">
       <h1 class="bannerTitle">Trade with rules, <span>not emotions</span></h1>
       <div class="bannerButtons d-flex items-center">
-        <button class="btn-primary regularText">Sign up</button>
+        <button class="btn-primary regularText" (click)="goToSignUp()">
+          Sign up
+        </button>
         <button class="btn-secondary regularText">
           Download Chrome Extension
         </button>
@@ -43,8 +45,15 @@
       }
     </div>
     <div class="landing-works-buttons d-flex items-center">
-      <button class="btn-primary regularText">Sign up</button>
-      <button class="btn-secondary regularText">Learn more</button>
+      <button class="btn-primary regularText" (click)="goToSignUp()">
+        Sign up
+      </button>
+      <button
+        class="btn-secondary regularText"
+        [routerLink]="['/how-it-works']"
+      >
+        Learn more
+      </button>
     </div>
   </section>
   <section class="landing-discover d-flex flex-col items-center">
@@ -72,7 +81,9 @@
     </h2>
 
     <div class="landing-signUp-buttons d-flex items-center">
-      <button class="btn-primary regularText">Sign up</button>
+      <button class="btn-primary regularText" (click)="goToSignUp()">
+        Sign up
+      </button>
     </div>
   </section>
 

@@ -28,7 +28,11 @@
   </ul>
 
   <div class="access-buttons d-flex items-center">
-    <button class="access-btn regularText login">Login</button>
-    <button class="access-btn regularText signUp">Sign Up</button>
+    <button class="access-btn regularText login" (click)="navigateToLogin()">
+      Login
+    </button>
+    <button class="access-btn regularText signUp" (click)="goToSignUp()">
+      Sign Up
+    </button>
   </div>
 </nav>

@@ -1,0 +1,54 @@
+<div class="plans d-flex pb-32 flex-col items-center">
+  <section class="plans-header d-flex flex-col items-center justify-center">
+    <h1 class="plansTitle worksTitle">Plans</h1>
+    <p class="subtitle color-text-gray">
+      Select the <span class="color-secondary-500">right plan for you</span>
+    </p>
+  </section>
+  <section class="plans-list d-flex items-center justify-center items-center">
+    @for (item of plans; track $index) {
+    <div
+      class="plan-card d-flex p-24 flex-col items-start color-background"
+      [class.isMostPopular]="item.mostPopular"
+    >
+      <div class="plan-card-header d-flex items-start justify-end">
+        <div
+          class="card-icon d-flex items-center justify-center p-10"
+          [class.isSquare]="item.icon === 'square'"
+          [class.isCircle]="item.icon === 'circle'"
+        >
+          @if (item.icon === 'square') {
+          <div class="square-icon"></div>
+          } @if (item.icon === 'circle') {
+          <div class="circle-icon"></div>
+          }
+        </div>
+        <div class="plan-card-titles d-flex flex-col items-start">
+          <h2 class="planName subtitle">{{ item.name }}</h2>
+          <h2 class="subtitle">
+            <span class="worksTitle">${{ item.price }}</span> /month
+          </h2>
+        </div>
+        @if(item.mostPopular) {
+        <div class="popular py-4 px-6">
+          <span class="mostPopular p-10 regularSemiText">Most Popular</span>
+        </div>
+        }
+      </div>
+      <div class="plan-features">
+        <ul class="d-flex flex-col items-start">
+          @for (feature of item.features; track $index) {
+          <li class="feature-item d-flex justify-between regularText">
+            <p>{{ feature.label }}</p>
+            <p>{{ feature.value }}</p>
+          </li>
+          }
+        </ul>
+      </div>
+      <div class="plan-card-footer d-flex items-center justify-center">
+        <button class="btn-primary regularSemiText">{{ item.cta }}</button>
+      </div>
+    </div>
+    }
+  </section>
+</div>

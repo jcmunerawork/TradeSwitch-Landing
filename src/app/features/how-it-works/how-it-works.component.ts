@@ -2,6 +2,7 @@ import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { RouterLink, RouterLinkActive } from '@angular/router';
 import { Router } from 'express';
+import { navigateToSignUp } from '../utils/navigate.utils';
 
 const landingSteps = [
   {
@@ -29,4 +30,8 @@ export class HowItWorks {
   landingSteps = landingSteps;
 
   constructor() {}
+
+  goToSignUp() {
+    navigateToSignUp();
+  }
 }

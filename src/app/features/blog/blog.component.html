@@ -1,0 +1,48 @@
+<div class="blog d-flex pb-32 flex-col items-center">
+  <section class="blog-header d-flex flex-col items-center justify-center">
+    <h1 class="blogTitle worksTitle">Blog</h1>
+
+    <div class="blog-categories d-flex items-start">
+      @for (cat of categories; track $index) {
+      <button
+        [class.active]="selectedIndex === $index"
+        (click)="selectCategory($index)"
+        class="category p-10 regularSemiText"
+      >
+        {{ cat }}
+      </button>
+      }
+    </div>
+  </section>
+
+  <section class="blog-gallery">
+    @for (item of blogCards; track $index) {
+    <div class="blog-card d-flex flex-col items-start p-30">
+      <p
+        class="blog-type p-10 bg-primary-200 regularSemiText color-primary-900"
+      >
+        {{ item.type }}
+      </p>
+      <figure class="blog-image">
+        <img [src]="item.imageUrl" alt="{{ item.title }}" />
+      </figure>
+      <h2 class="cardTitle color-background mb-10">{{ item.title }}</h2>
+      <p class="blog-description regularText color-background">
+        {{ item.description }}
+      </p>
+    </div>
+    }
+  </section>
+  <section class="blog-signUp d-flex flex-col items-center">
+    <h2 class="worksTitle color-background">
+      Sign Up today and join +2500 traders already using
+      <span class="color-primary">TradeSwitch</span>
+    </h2>
+
+    <div class="blog-signUp-buttons d-flex items-center">
+      <button class="btn-primary regularText" (click)="goToSignUp()">
+        Sign up
+      </button>
+    </div>
+  </section>
+</div>

@@ -5,7 +5,9 @@
         How it works <span>A-Z GUIDE</span>
       </h1>
       <div class="bannerButtons d-flex items-center">
-        <button class="btn-primary regularText">Sign up</button>
+        <button class="btn-primary regularText" (click)="goToSignUp()">
+          Sign up
+        </button>
         <button class="btn-secondary regularText">
           Download Chrome Extension
         </button>
@@ -85,10 +87,6 @@
       </div>
       }
     </div>
-    <div class="landing-works-buttons d-flex items-center">
-      <button class="btn-primary regularText">Sign up</button>
-      <button class="btn-secondary regularText">Learn more</button>
-    </div>
   </section>
   <section class="strategy d-flex flex-col items-center">
     <h2 class="strategyTitle worksTitle color-background">The Strategy</h2>
@@ -103,7 +101,9 @@
             <li><b>Start Trading </b></li>
           </ol>
           <div class="landing-signUp-buttons d-flex items-center">
-            <button class="btn-secondary regularText">Sign up</button>
+            <button class="btn-secondary regularText" (click)="goToSignUp()">
+              Sign up
+            </button>
           </div>
         </div>
         <figure>
@@ -120,7 +120,9 @@
     </h2>
 
     <div class="landing-signUp-buttons d-flex items-center">
-      <button class="btn-primary regularText">Sign up</button>
+      <button class="btn-primary regularText mt-64" (click)="goToSignUp()">
+        Sign up
+      </button>
     </div>
   </section>
 </div>

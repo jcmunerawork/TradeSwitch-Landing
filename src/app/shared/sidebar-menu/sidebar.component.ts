@@ -1,5 +1,6 @@
 import { Component, HostListener, OnInit } from '@angular/core';
 import { Router, RouterLink, RouterLinkActive } from '@angular/router';
+import { navigateToSignUp } from '../../features/utils/navigate.utils';
 
 @Component({
   selector: 'app-sidebar',
@@ -16,5 +17,16 @@ export class Sidebar {
   @HostListener('window:scroll', [])
   onWindowScroll() {
     this.isScrolled = window.pageYOffset > 5;
+  }
+
+  navigateToLogin() {
+    window.open(
+      'https://crismen2610.github.io/tradeManager-web/login',
+      '_blank'
+    );
+  }
+
+  goToSignUp() {
+    navigateToSignUp();
   }
 }

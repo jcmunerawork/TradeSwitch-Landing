@@ -48,6 +48,14 @@ $weight-regular: 400; // Regular
   line-height: 14px;
 }
 
+.regularSemiText {
+  font-family: $font-interface !important;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 14px;
+}
+
 .testimonialText {
   font-family: $font-interface !important;
   font-size: 1.5rem;
@@ -101,6 +109,15 @@ $weight-regular: 400; // Regular
   font-style: normal;
   font-weight: 500;
   line-height: 1.3915rem;
+  letter-spacing: -0.02719rem;
+}
+
+.cardTitle {
+  font-family: $font-interface;
+  font-size: 2.25rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.9rem;
   letter-spacing: -0.02719rem;
 }
 

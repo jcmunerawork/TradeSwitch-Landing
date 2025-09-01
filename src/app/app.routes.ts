@@ -13,4 +13,19 @@ export const routes: Routes = [
         (m) => m.HowItWorks
       ),
   },
+  {
+    path: 'blog',
+    loadComponent: () =>
+      import('./features/blog/blog.component').then((m) => m.BlogComponent),
+  },
+  {
+    path: 'faq',
+    loadComponent: () =>
+      import('./features/faq/faq.component').then((m) => m.FaqComponent),
+  },
+  {
+    path: 'plans',
+    loadComponent: () =>
+      import('./features/plans/plans.component').then((m) => m.PlansComponent),
+  },
 ];

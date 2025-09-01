@@ -1,0 +1,45 @@
+<div class="faq d-flex pb-32 flex-col items-center">
+  <section class="faq-header d-flex flex-col items-center justify-center">
+    <h1 class="faqTitle worksTitle">FAQ</h1>
+
+    <div class="faq-categories d-flex items-start">
+      @for (cat of categories; track $index) {
+      <button
+        [class.active]="selectedIndex === $index"
+        (click)="selectCategory($index)"
+        class="category p-10 regularSemiText"
+      >
+        {{ cat }}
+      </button>
+      }
+    </div>
+  </section>
+  <section class="faq-list d-flex flex-col items-center">
+    @for (faq of faqs; track $index) {
+    <div class="faq-item">
+      <div
+        class="faq-question d-flex justify-between"
+        (click)="toggleFaq($index)"
+      >
+        <span class="color-secondary-500 subtitle">{{ faq.question }}</span>
+        <span class="faq-icon color-background">{{
+          openIndex === $index ? "−" : "+"
+        }}</span>
+      </div>
+      @if (openIndex === $index) {
+      <div class="faq-answer color-text-gray regularText mt-16">
+        {{ faq.answer }}
+      </div>
+      }
+    </div>
+    }
+  </section>
+
+  <section class="faq-signUp d-flex flex-col items-center">
+    <h2 class="worksTitle color-background">Still have questions?</h2>
+
+    <div class="faq-signUp-buttons d-flex items-center">
+      <button class="btn-primary regularText">Contact support</button>
+    </div>
+  </section>
+</div>
