@@ -94,8 +94,15 @@
         Don't just hear it from us, hear it from real users.
       </p>
     </div>
-    <div class="landing-testimonials-content d-flex items-center">
-      @for (testimonial of testimonialData; track $index) {
+    <div
+      #testimonialsContent
+      class="landing-testimonials-content d-flex items-center"
+      (mousedown)="startDrag($event)"
+      (mousemove)="onDrag($event)"
+      (mouseup)="stopDrag()"
+      (mouseleave)="stopDrag()"
+    >
+      > @for (testimonial of testimonialData; track $index) {
       <div
         class="landing-testimonial-item d-flex flex-col justify-center items-start"
       >

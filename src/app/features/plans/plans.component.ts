@@ -55,7 +55,7 @@ export const PLANS: PlanCard[] = [
 
 @Component({
   selector: 'app-plans',
-  imports: [RouterLink, RouterLinkActive, CommonModule],
+  imports: [CommonModule],
   templateUrl: './plans.component.html',
   styleUrl: './plans.component.scss',
   standalone: true,

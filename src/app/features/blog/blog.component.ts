@@ -59,7 +59,7 @@ export const BLOG_CARDS = [
 
 @Component({
   selector: 'app-blog',
-  imports: [RouterLink, RouterLinkActive, CommonModule],
+  imports: [CommonModule],
   templateUrl: './blog.component.html',
   styleUrl: './blog.component.scss',
   standalone: true,

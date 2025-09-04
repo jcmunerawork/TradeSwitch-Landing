@@ -21,7 +21,7 @@ const landingSteps = [
 
 @Component({
   selector: 'app-how-it-works',
-  imports: [RouterLink, RouterLinkActive, CommonModule],
+  imports: [CommonModule],
   templateUrl: './how-it-works.component.html',
   styleUrl: './how-it-works.component.scss',
   standalone: true,

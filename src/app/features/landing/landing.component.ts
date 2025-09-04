@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, ElementRef, ViewChild } from '@angular/core';
 import { RouterLink, RouterLinkActive } from '@angular/router';
 import { Router } from 'express';
 import { navigateToSignUp } from '../utils/navigate.utils';
@@ -39,45 +39,70 @@ export const testimonialData = [
     avatar: 'assets/img/avatars/avatar-4.webp',
     rating: 5,
     text: 'Trade Switch is just what I was looking for. Nice work on Trade Switch.',
-    name: 'Kyle Roberts DVM',
+    name: 'Roger Brown',
     position: 'Customer Web Consultant',
   },
   {
     avatar: 'assets/img/avatars/avatar-1.webp',
     rating: 4,
-    text: 'Trade Switch is just what I was looking for. Nice work on Trade Switch.',
+    text: 'Finally, something that makes switching trades less of a headache!',
     name: 'Kyle Roberts DVM',
-    position: 'Customer Web Consultant',
+    position: 'Crypto Investor',
   },
   {
     avatar: 'assets/img/avatars/avatar-2.webp',
     rating: 5,
-    text: 'Trade Switch is just what I was looking for. Nice work on Trade Switch.',
-    name: 'Kyle Roberts DVM',
-    position: 'Customer Web Consultant',
+    text: 'It saved me so much time today, keep it up!',
+    name: 'Viviana Pérez',
+    position: 'Data Analist',
   },
   {
     avatar: 'assets/img/avatars/avatar-3.webp',
     rating: 5,
-    text: 'Trade Switch is just what I was looking for. Nice work on Trade Switch.',
-    name: 'Kyle Roberts DVM',
-    position: 'Customer Web Consultant',
+    text: 'Props to the team, this feels built for real traders, not just casual apps.',
+    name: 'Olivia Davis',
+    position: 'Retail Investor',
   },
 ];
 
 @Component({
   selector: 'app-landing',
-  imports: [RouterLink, RouterLinkActive, CommonModule],
+  imports: [RouterLink, CommonModule],
   templateUrl: './landing.component.html',
   styleUrl: './landing.component.scss',
   standalone: true,
 })
 export class Landing {
+  @ViewChild('testimonialsContent', { static: true })
+  testimonialsContent!: ElementRef;
   landingSteps = landingSteps;
   discoverContent = discoverContent;
   testimonialData = testimonialData;
 
+  isDragging = false;
+  startX = 0;
+  scrollLeft = 0;
+
   constructor() {}
+
+  startDrag(event: MouseEvent) {
+    this.isDragging = true;
+    this.startX =
+      event.pageX - this.testimonialsContent.nativeElement.offsetLeft;
+    this.scrollLeft = this.testimonialsContent.nativeElement.scrollLeft;
+  }
+
+  onDrag(event: MouseEvent) {
+    if (!this.isDragging) return;
+    event.preventDefault();
+    const x = event.pageX - this.testimonialsContent.nativeElement.offsetLeft;
+    const walk = x - this.startX;
+    this.testimonialsContent.nativeElement.scrollLeft = this.scrollLeft - walk;
+  }
+
+  stopDrag() {
+    this.isDragging = false;
+  }
 
   goToSignUp() {
     navigateToSignUp();

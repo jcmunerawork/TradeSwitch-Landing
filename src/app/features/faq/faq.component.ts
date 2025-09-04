@@ -1,7 +1,5 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
-import { RouterLink, RouterLinkActive } from '@angular/router';
-import { Router } from 'express';
 
 export enum Category {
   GettingStarted = 'Getting Started',
@@ -45,7 +43,7 @@ export const FAQ_ITEMS: FaqItem[] = [
 
 @Component({
   selector: 'app-faq',
-  imports: [RouterLink, RouterLinkActive, CommonModule],
+  imports: [CommonModule],
   templateUrl: './faq.component.html',
   styleUrl: './faq.component.scss',
   standalone: true,

@@ -1,0 +1,28 @@
+<footer class="tradeswitch-footer d-flex flex-col items-center">
+  <div class="footer-content d-flex justify-between items-center">
+    <figure>
+      <img src="assets/logo.png" alt="TradeSwitch Logo" />
+    </figure>
+    <nav class="footer-nav regularText">
+      @for (item of tradeSwitchFooter.links; track $index) {
+      <a [routerLink]="item.url" class="footer-link">
+        {{ item.label }}
+      </a>
+      }
+    </nav>
+    <div class="footer-cta d-flex items-center">
+      @for (item of tradeSwitchFooter.cta; track $index) {
+      <button
+        class="regularText"
+        [ngClass]="item.style"
+        (click)="item.action()"
+      >
+        {{ item.label }}
+      </button>
+      }
+    </div>
+  </div>
+  <div class="footer-copyright regularText color-gray mt-20 mb-20">
+    {{ tradeSwitchFooter.copyright }}
+  </div>
+</footer>
