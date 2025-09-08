@@ -20,14 +20,14 @@ export interface PlanCard {
 export const PLANS: PlanCard[] = [
   {
     name: 'Starter',
-    price: 135,
+    price: 35,
     period: '/month',
     icon: 'circle',
     color: '#4b7ee8',
     features: [
       { label: 'Profit Target', value: '$6,000' },
       { label: 'Max Contracts', value: '6' },
-      { label: 'Trailing Max Drawdown', value: '$3,500' },
+      { label: 'Trading Accounts', value: '1' },
       { label: 'Daily Loss Limit', value: '$2,400' },
       { label: 'Activation Fee', value: 'N/A' },
       { label: 'Consistency Rule', value: 'Yes' },
@@ -36,7 +36,7 @@ export const PLANS: PlanCard[] = [
   },
   {
     name: 'Pro',
-    price: 250,
+    price: 99,
     period: '/month',
     mostPopular: true,
     icon: 'square',
@@ -44,12 +44,12 @@ export const PLANS: PlanCard[] = [
     features: [
       { label: 'Profit Target', value: '$6,000' },
       { label: 'Max Contracts', value: '6' },
-      { label: 'Trailing Max Drawdown', value: '$3,500' },
+      { label: 'Trading Accounts', value: '5' },
       { label: 'Daily Loss Limit', value: '$2,400' },
       { label: 'Activation Fee', value: 'N/A' },
       { label: 'Consistency Rule', value: 'Yes' },
     ],
-    cta: 'Get Starter Now',
+    cta: 'Change Plan',
   },
 ];
 

@@ -1,0 +1,210 @@
+<div class="landing d-flex pb-32 flex-col items-center">
+  <section class="banner d-flex items-center justify-center">
+    <div class="banner-actions d-flex flex-col items-start justify-center">
+      <h1 class="bannerTitle worksTitle">
+        About Us <br />
+        <span class="cardTitle">Trade with rules, not emotions</span>
+      </h1>
+      <p class="regularText color-text-gray" style="line-height: normal">
+        Your trading plan is only as good as your ability to follow it.
+
+        <strong class="color-secondary-500">TradeSwitch </strong> was built to
+        help you stay disciplined, consistent, and in control—every single
+        trade.
+      </p>
+      <div class="bannerButtons d-flex items-center">
+        <button class="btn-primary regularText" (click)="goToSignUp()">
+          Sign up
+        </button>
+        <button class="btn-secondary regularText">
+          Download Chrome Extension
+        </button>
+      </div>
+    </div>
+
+    <div
+      class="banner-main d-flex flex-col justify-center items-center regularText bannerSubtitle color-text-gray"
+    >
+      <figure>
+        <img src="assets/img/about-us/banner.webp" alt="" />
+      </figure>
+    </div>
+  </section>
+
+  <section class="our-mission d-flex flex-col items-center">
+    <div class="our-mission-title d-flex flex-col items-center">
+      <h2 class="worksTitle color-background">Our Mission</h2>
+      <p class="subtitle color-text-gray">
+        At TradeSwitch, we believe trading success isn't about predicting the
+        markets—it's about controlling yourself.
+      </p>
+    </div>
+    <div class="our-mission-content d-flex items-center color-background">
+      <div class="our-mission-descriptions d-flex flex-col items-start">
+        <p class="regularText">
+          Every trader starts with a plan, but when emotions take over,
+          discipline disappears. Fear, greed, hesitation, and overconfidence
+          lead to impulsive decisions—and missed opportunities.
+        </p>
+        <p class="subtitle color-secondary-500">TradeSwitch changes that.</p>
+        <p class="regularText">
+          We give traders a simple, powerful tool to set rules, enforce
+          discipline, and stick to their strategy—automatically.
+        </p>
+      </div>
+      <figure>
+        <img src="assets/img/about-us/mission.webp" alt="" />
+      </figure>
+    </div>
+  </section>
+
+  <section class="who-we-help d-flex flex-col items-center">
+    <div class="help-title d-flex flex-col items-center">
+      <h2 class="worksTitle color-background">Who We Help</h2>
+      <p class="subtitle color-text-gray">
+        TradeSwitch is built for traders who want consistency and
+        <span class="color-secondary-500">control:</span>
+      </p>
+    </div>
+    <div class="help-content d-flex items-center color-background">
+      @for (item of traderCards; track $index) {
+      <div class="help-card d-flex flex-col items-start p-20">
+        <h3 class="subtitle color-secondary-500">{{ item.title }}</h3>
+        <p class="regularText color-background">
+          {{ item.description }}
+        </p>
+      </div>
+      }
+    </div>
+    <p class="help-little subtitle color-text-gray">
+      Whether you're trading forex, stocks, crypto, or futures, TradeSwitch
+      keeps you focused on what matters most
+      <span class="color-secondary-500">—your plan.</span>
+    </p>
+  </section>
+
+  <section class="landing-works d-flex flex-col items-center">
+    <div class="landing-works-titles d-flex flex-col items-center">
+      <h2 class="worksTitle color-background">How TradeSwitch Works</h2>
+      <p class="subtitle color-text-gray">
+        TradeSwitch is your
+        <span class="color-primary-300">trading discipline co-pilot:</span>
+      </p>
+    </div>
+    <div class="landing-works-content d-flex justify-between items-center">
+      @for (step of landingSteps; track $index) {
+      <div class="landing-works-step d-flex flex-col items-center">
+        <h3 class="stepTitle subtitle color-secondary-500 mb-20">
+          {{ step.title }}
+        </h3>
+        <figure>
+          <img [src]="step.img" alt="" />
+        </figure>
+      </div>
+      }
+    </div>
+    <p class="last-message subtitle color-text-gray">
+      With the TradeSwitch Chrome Extension, you can manage everything from your
+      browser
+      <span class="color-primary-300"
+        >—no extra software, no complicated setup.</span
+      >
+    </p>
+    <div class="landing-signUp-buttons d-flex items-center">
+      <button class="btn-primary regularText" (click)="goToSignUp()">
+        Sign up
+      </button>
+      <button class="btn-secondary regularText" (click)="goToHowItWorks()">
+        Learn more
+      </button>
+    </div>
+  </section>
+
+  <section class="why-choose-us d-flex flex-col items-center">
+    <div class="why-title d-flex flex-col items-center">
+      <h3 class="worksTitle color-background">
+        Why Traders Choose TradeSwitch
+      </h3>
+      <p class="subtitle color-text-gray">
+        Unlike bots or complex platforms, TradeSwitch doesn't trade for you
+        <span class="color-primary-300">—it helps you trade better.</span>
+      </p>
+    </div>
+    <div
+      class="why-content d-flex justify-center items-center color-background"
+    >
+      <div class="description d-flex flex-col items-start">
+        <h3 class="subtitle color-secondary-500">
+          Here's why thousands of traders are switching:
+        </h3>
+        <div class="description-list d-flex flex-col items-start">
+          @for (item of features; track $index) {
+          <div class="description-item d-flex items-center">
+            <div class="static-checkbox mr-16">
+              <svg width="32" height="32" viewBox="0 0 32 32">
+                <rect
+                  x="0"
+                  y="0"
+                  width="32"
+                  height="32"
+                  rx="4"
+                  fill="#91FF38"
+                />
+                <path
+                  d="M9 17l5 5 9-9"
+                  stroke="#191919"
+                  stroke-width="3"
+                  fill="none"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </div>
+            <p class="item-description regularText color-background">
+              <strong>{{ item.title }}</strong>
+              <span class="icon-status-arrow-right color-text-gray"></span>
+              <span class="color-text-gray">{{ item.subtitle }}</span>
+            </p>
+          </div>
+          }
+        </div>
+      </div>
+      <figure>
+        <img src="assets/img/about-us/why.webp" alt="" />
+      </figure>
+    </div>
+  </section>
+  <section class="our-mission d-flex flex-col items-center">
+    <div class="our-mission-title d-flex flex-col items-center">
+      <h2 class="worksTitle color-background">Our Mission</h2>
+      <p class="subtitle color-text-gray">
+        Our goal is simple:
+        <span class="color-primary-300"
+          >Help traders master themselves before mastering the markets.</span
+        >
+      </p>
+      <p class="subtitle color-text-gray">
+        We're creating tools that make trading
+        <span class="color-primary-300">simpler, smarter</span>, and
+        <span class="color-primary-300">more human</span>, giving every
+        trader—from beginner to pro—the confidence to stay consistent.
+      </p>
+    </div>
+  </section>
+  <section class="landing-signUp d-flex flex-col items-center">
+    <h2 class="worksTitle color-background">
+      <span class="color-primary-300">Take control</span>
+      of your trading today. Set your rules. Enforce your strategy.
+      <span class="color-primary-300">Trade without emotion.</span>
+    </h2>
+
+    <div class="landing-signUp-buttons d-flex items-center">
+      <button class="btn-primary regularText mt-64" (click)="goToSignUp()">
+        Get Started Now
+      </button>
+      <button class="btn-secondary regularText mt-64">
+        Download chrome extension
+      </button>
+    </div>
+  </section>
+</div>

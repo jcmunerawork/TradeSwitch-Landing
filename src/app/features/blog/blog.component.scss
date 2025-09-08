@@ -13,22 +13,26 @@
 
     .blog-categories {
       gap: 0.625rem;
+    }
+  }
 
-      .category {
-        border-radius: 1.5rem;
-        border: 1px solid #eaf2f8;
-        background: none;
-        color: #fff;
-        cursor: pointer;
-        transition: background 0.2s;
+  .blog-btns {
+    width: 100%;
+  }
 
-        &.active,
-        &:hover {
-          background: #d1ff81;
-          color: #434343;
-          border-color: #d1ff81;
-        }
-      }
+  .category {
+    border-radius: 1.5rem;
+    border: 1px solid #eaf2f8;
+    background: none;
+    color: #fff;
+    cursor: pointer;
+    transition: background 0.2s;
+
+    &.active,
+    &:hover {
+      background: #d1ff81;
+      color: #434343 !important;
+      border-color: #d1ff81;
     }
   }
 
@@ -60,7 +64,7 @@
 
   .blog-gallery {
     display: grid;
-    height: 58.375rem;
+    min-height: 58.375rem;
     padding: 0 4rem;
     row-gap: 3.5rem;
     column-gap: 56px;
@@ -70,7 +74,7 @@
 
     .blog-card {
       gap: 1rem;
-      max-height: 30rem;
+      max-height: 31rem;
 
       border-radius: 0.5rem;
       border: 0.5px solid #4a4a4a;

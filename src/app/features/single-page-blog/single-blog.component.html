@@ -1,0 +1,132 @@
+<div class="blog-container d-flex justify-between items-start color-background">
+  <aside class="blog-toc d-flex flex-col items-start">
+    <div class="toc d-flex flex-col items-start">
+      <h4 class="boldRegularText">In this article</h4>
+      <ol class="d-flex flex-col items-start">
+        <li class="active color-secondary-500 boldRegularText">
+          <span class="icon-arrow-circle mr-10"></span>1.
+          {{ selectedBlog?.title }}
+        </li>
+        @for (section of selectedBlog?.sections; track $index) {
+        <li class="color-text-gray regularText">
+          {{ $index + 2 }}. {{ section.title }}
+        </li>
+        }
+      </ol>
+    </div>
+    <div class="share d-flex flex-col items-start justify-center">
+      <p class="regularText">Share this article</p>
+      <div class="icons d-flex items-center">
+        <a
+          [href]="twitterShareUrl"
+          target="_blank"
+          rel="noopener"
+          aria-label="Share on X"
+          ><i class="icon-x color-secondary-500"></i
+        ></a>
+        <a
+          [href]="emailShareUrl"
+          target="_blank"
+          rel="noopener"
+          aria-label="Share via Email"
+          ><i class="icon-mail color-secondary-500"></i
+        ></a>
+        <a
+          [href]="linkedInShareUrl"
+          target="_blank"
+          rel="noopener"
+          aria-label="Share on LinkedIn"
+          ><i class="icon-linkedin color-secondary-500"></i
+        ></a>
+      </div>
+    </div>
+  </aside>
+
+  <section class="blog-content d-flex flex-col items-start justify-center">
+    <div class="blog-meta d-flex items-start justify-between">
+      <span class="regularText keywords">
+        <strong>Keywords:</strong> {{ selectedBlog?.keywords?.join(", ") }}
+      </span>
+      <span class="reading-time caption color-text-gray"
+        >Estimated reading time: {{ selectedBlog?.estimatedTime }}</span
+      >
+    </div>
+    <div class="blog-hero">
+      <img [src]="selectedBlog?.heroImage" [alt]="selectedBlog?.title" />
+    </div>
+    <div class="blog-intro d-flex flex-col items-start">
+      <h1 class="titleText">{{ selectedBlog?.title }}</h1>
+      <p class="regularText">{{ selectedBlog?.summary }}</p>
+    </div>
+    @for (section of selectedBlog?.sections; track $index) {
+    <ng-container>
+      <div class="blog-section d-flex flex-col items-start">
+        @if(section.stepNumber) {
+
+        <h2 class="subtitle my-20">{{ section.title }}</h2>
+        } @if (!section.stepNumber) {
+        <h2 class="subtitle my-20">{{ section.title }}</h2>
+
+        }
+        <p class="regularText" [ngClass]="{ 'pb-20': section.bullets }">
+          {{ section.content }}
+        </p>
+
+        @if (section.bullets) {
+        <ul class="ml-18">
+          @for (bullet of section.bullets; track $index) {
+          <li class="regularText">{{ bullet }}</li>
+          }
+        </ul>
+        } @if (section.image) {
+        <img [src]="section.image" [alt]="section.title" />
+        }
+      </div>
+    </ng-container>
+    } @if (selectedBlog?.id === 'account-setup') {
+    <button class="cta-signup btn-primary regularText">Sign up now</button>
+    }
+  </section>
+</div>
+
+<section class="blog-signUp d-flex flex-col items-center">
+  <h2 class="worksTitle color-background">Discover more strategies</h2>
+
+  <div class="blog-signUp-buttons d-flex items-center">
+    <button
+      class="btn-primary regularText mt-32 mb-64"
+      (click)="goToBlogPage()"
+    >
+      See more
+    </button>
+  </div>
+</section>
+
+<section class="blog-gallery mb-32">
+  @for (item of blogCards; track $index) {
+  <div class="blog-card d-flex flex-col items-start p-30">
+    <p class="blog-type p-10 bg-primary-200 regularSemiText color-primary-900">
+      {{ item.type }}
+    </p>
+    <figure class="blog-image">
+      <img [src]="item.imageUrl" alt="{{ item.title }}" />
+    </figure>
+    <h2 class="cardTitle color-background mb-10">{{ item.title }}</h2>
+    <p class="blog-description regularText color-background mb-10">
+      {{ item.description }}
+    </p>
+    <div class="blog-btns d-flex justify-end">
+      <button
+        class="category regularText color-background p-10 d-flex items-center"
+        (click)="goToBlog(item.id)"
+      >
+        View More
+        <span
+          class="icon-status-arrow-right ml-10 mt-2"
+          style="font-size: 0.8rem"
+        ></span>
+      </button>
+    </div>
+  </div>
+  }
+</section>

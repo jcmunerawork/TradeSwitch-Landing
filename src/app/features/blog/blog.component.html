@@ -27,9 +27,21 @@
         <img [src]="item.imageUrl" alt="{{ item.title }}" />
       </figure>
       <h2 class="cardTitle color-background mb-10">{{ item.title }}</h2>
-      <p class="blog-description regularText color-background">
+      <p class="blog-description regularText color-background mb-10">
         {{ item.description }}
       </p>
+      <div class="blog-btns d-flex justify-end">
+        <button
+          class="category regularText color-background p-10 d-flex items-center"
+          (click)="goToBlog(item.id)"
+        >
+          View More
+          <span
+            class="icon-status-arrow-right ml-10 mt-2"
+            style="font-size: 0.8rem"
+          ></span>
+        </button>
+      </div>
     </div>
     }
   </section>

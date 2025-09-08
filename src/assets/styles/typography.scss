@@ -56,6 +56,20 @@ $weight-regular: 400; // Regular
   line-height: 14px;
 }
 
+.boldRegularText {
+  font-family: $font-interface;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 700;
+}
+
+.caption {
+  font-family: $font-interface;
+  font-size: 0.875rem;
+  font-style: italic;
+  font-weight: 400;
+}
+
 .testimonialText {
   font-family: $font-interface !important;
   font-size: 1.5rem;
