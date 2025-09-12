@@ -59,7 +59,7 @@ export const PLANS: PlanCard[] = [
       { label: 'Trading Journal', value: 'YES' },
       { label: 'Live Statistics', value: 'YES' },
     ],
-    cta: 'Change Plan',
+    cta: 'Get Starter Now',
   },
 ];
 
