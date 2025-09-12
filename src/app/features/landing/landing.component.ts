@@ -2,7 +2,7 @@ import { CommonModule } from '@angular/common';
 import { Component, ElementRef, ViewChild } from '@angular/core';
 import { RouterLink, RouterLinkActive } from '@angular/router';
 import { Router } from 'express';
-import { navigateToSignUp } from '../utils/navigate.utils';
+import { downloadZip, navigateToSignUp } from '../utils/navigate.utils';
 
 const landingSteps = [
   {
@@ -106,5 +106,9 @@ export class Landing {
 
   goToSignUp() {
     navigateToSignUp();
+  }
+
+  downloadPluginZip() {
+    downloadZip();
   }
 }

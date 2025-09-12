@@ -1,7 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
-import { navigateToSignUp } from '../utils/navigate.utils';
+import { downloadZip, navigateToSignUp } from '../utils/navigate.utils';
 
 const landingSteps = [
   {
@@ -84,5 +84,9 @@ export class AboutUsComponent {
 
   goToHowItWorks() {
     this.router.navigate(['/how-it-works']);
+  }
+
+  downloadPluginZip() {
+    downloadZip();
   }
 }

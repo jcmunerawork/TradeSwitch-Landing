@@ -16,7 +16,7 @@
         <button class="btn-primary regularText" (click)="goToSignUp()">
           Sign up
         </button>
-        <button class="btn-secondary regularText">
+        <button class="btn-secondary regularText" (click)="downloadPluginZip()">
           Download Chrome Extension
         </button>
       </div>
@@ -202,7 +202,10 @@
       <button class="btn-primary regularText mt-64" (click)="goToSignUp()">
         Get Started Now
       </button>
-      <button class="btn-secondary regularText mt-64">
+      <button
+        class="btn-secondary regularText mt-64"
+        (click)="downloadPluginZip()"
+      >
         Download chrome extension
       </button>
     </div>

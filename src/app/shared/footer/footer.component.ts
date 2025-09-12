@@ -1,7 +1,10 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { RouterLink, RouterLinkActive } from '@angular/router';
-import { navigateToSignUp } from '../../features/utils/navigate.utils';
+import {
+  downloadZip,
+  navigateToSignUp,
+} from '../../features/utils/navigate.utils';
 
 export const TRADE_SWITCH_FOOTER = {
   company: 'TradeSwitch',
@@ -51,9 +54,16 @@ export class Footer {
     this.tradeSwitchFooter.cta[0].action = () => {
       this.goToSignUp();
     };
+    this.tradeSwitchFooter.cta[1].action = () => {
+      this.downloadPluginZip();
+    };
   }
 
   goToSignUp() {
     navigateToSignUp();
+  }
+
+  downloadPluginZip() {
+    downloadZip();
   }
 }

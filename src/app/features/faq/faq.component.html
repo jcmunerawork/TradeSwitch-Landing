@@ -15,7 +15,7 @@
     </div>
   </section>
   <section class="faq-list d-flex flex-col items-center">
-    @for (faq of faqs; track $index) {
+    @for (faq of filteredFaqs; track $index) {
     <div class="faq-item">
       <div
         class="faq-question d-flex justify-between"

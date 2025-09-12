@@ -13,11 +13,12 @@
   }
   .plans-list {
     align-content: flex-start;
-    gap: 3.5rem;
+    justify-content: space-between;
     flex-wrap: wrap;
     .plan-card {
       gap: 32px;
-      min-width: 28.5rem;
+      width: 32%;
+      min-height: 27rem;
       border-radius: 0.5rem;
       border: 0.5px solid #4a4a4a;
       background: radial-gradient(

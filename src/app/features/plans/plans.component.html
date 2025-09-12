@@ -5,7 +5,7 @@
       Select the <span class="color-secondary-500">right plan for you</span>
     </p>
   </section>
-  <section class="plans-list d-flex items-center justify-center items-center">
+  <section class="plans-list d-flex items-center justify-between items-center">
     @for (item of plans; track $index) {
     <div
       class="plan-card d-flex p-24 flex-col items-start color-background"
@@ -40,7 +40,9 @@
           @for (feature of item.features; track $index) {
           <li class="feature-item d-flex justify-between regularText">
             <p>{{ feature.label }}</p>
-            <p>{{ feature.value }}</p>
+            <p [ngClass]="{ 'color-primary-500': feature.value === 'YES' }">
+              {{ feature.value }}
+            </p>
           </li>
           }
         </ul>
