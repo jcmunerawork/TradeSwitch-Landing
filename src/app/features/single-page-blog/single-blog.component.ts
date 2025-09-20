@@ -99,4 +99,18 @@ export class SingleBlogComponent implements OnInit, OnChanges {
       encodeURIComponent(this.shareText + ' ' + this.currentUrl)
     );
   }
+
+  // Función para obtener la imagen de alta calidad para single blog
+  getHighQualityImage(originalImageUrl: string): string {
+    const imageMapping: { [key: string]: string } = {
+      'assets/img/blog/image-first-article.webp': 'assets/img/blog/single_page/Image_first_article.webp',
+      'assets/img/blog/image-second-article.webp': 'assets/img/blog/single_page/Image_second_article.webp',
+      'assets/img/blog/image-third-article.webp': 'assets/img/blog/single_page/Image_third_article.webp',
+      'assets/img/blog/image-fourth-article.webp': 'assets/img/blog/single_page/Image_fourth_article.webp',
+      'assets/img/blog/image-fifth-article.webp': 'assets/img/blog/single_page/Image_fiveth_article.webp',
+      'assets/img/blog/image-sixth-article.webp': 'assets/img/blog/single_page/Image_sixth_article.webp'
+    };
+    
+    return imageMapping[originalImageUrl] || originalImageUrl;
+  }
 }

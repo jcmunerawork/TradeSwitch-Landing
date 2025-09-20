@@ -52,7 +52,7 @@
       >
     </div>
     <div class="blog-hero">
-      <img [src]="selectedBlog?.heroImage" [alt]="selectedBlog?.title" />
+      <img [src]="getHighQualityImage(selectedBlog?.heroImage ?? '')" alt="{{ selectedBlog?.title }}" />
     </div>
     <div class="blog-intro d-flex flex-col items-start">
       <h1 class="titleText">{{ selectedBlog?.title }}</h1>
@@ -79,7 +79,7 @@
           }
         </ul>
         } @if (section.image) {
-        <img [src]="section.image" [alt]="section.title" />
+        <img [src]="getHighQualityImage(section.image)" [alt]="section.title" />
         }
       </div>
     </ng-container>
