@@ -21,7 +21,7 @@ export class Sidebar {
 
   navigateToLogin() {
     window.open(
-      'https://crismen2610.github.io/tradeManager-web/login',
+      'https://jcmunerawork.github.io/tradeManager-web/login',
       '_blank'
     );
   }
