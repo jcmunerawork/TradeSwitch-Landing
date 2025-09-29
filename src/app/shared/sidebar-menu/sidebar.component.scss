@@ -9,6 +9,7 @@
   padding: 2rem 10rem;
   align-self: stretch;
   transition: background 0.3s;
+  
   .logo {
     width: 10%;
     cursor: pointer;
@@ -18,7 +19,57 @@
     }
   }
 
-  .menu {
+  // Botón hamburguesa (visible por defecto)
+  .hamburger-btn {
+    display: flex;
+    flex-direction: column;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+    z-index: 1001;
+    
+    span {
+      width: 25px;
+      height: 3px;
+      background-color: #fff;
+      margin: 3px 0;
+      transition: 0.3s;
+      border-radius: 2px;
+    }
+    
+    &.active {
+      span:nth-child(1) {
+        transform: rotate(-45deg) translate(-5px, 6px);
+      }
+      span:nth-child(2) {
+        opacity: 0;
+      }
+      span:nth-child(3) {
+        transform: rotate(45deg) translate(-5px, -6px);
+      }
+    }
+  }
+
+  // Contenedor del menú desktop
+  .desktop-nav-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    gap: 2rem;
+  }
+
+  // Contenedor del menú móvil
+  .mobile-nav-container {
+    display: none;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    gap: 1rem;
+  }
+
+  .desktop-menu {
     list-style: none;
     gap: 40px;
     li {
@@ -36,7 +87,7 @@
     }
   }
 
-  .access-buttons {
+  .desktop-buttons {
     gap: 0.625rem;
     .access-btn {
       padding: 0.625rem;
@@ -54,6 +105,185 @@
         background: #9bf526;
         color: #222325;
       }
+    }
+  }
+
+
+  // Menú lateral móvil
+  .mobile-menu {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(10px);
+    transition: right 0.3s ease;
+    z-index: 999;
+    
+    &.open {
+      right: 0;
+    }
+    
+    .mobile-menu-content {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 80%;
+      max-width: 300px;
+      height: 100%;
+      background: #161719;
+      padding: 2rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 2rem;
+      
+      .mobile-menu-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        
+        li {
+          margin-bottom: 1.5rem;
+          
+          a {
+            color: #6fa5eb;
+            text-decoration: none;
+            font-size: 1.2rem;
+            font-weight: 500;
+            display: block;
+            padding: 0.5rem 0;
+            transition: color 0.2s;
+            
+            &:hover {
+              color: #3054c5;
+            }
+          }
+        }
+      }
+      
+      .mobile-access-buttons {
+        gap: 1rem;
+        
+        .access-btn {
+          width: 100%;
+          padding: 0.75rem;
+          text-align: center;
+          border-radius: 0.375rem;
+          border: none;
+          cursor: pointer;
+          font-size: 1rem;
+          font-weight: 500;
+          
+          &.login {
+            border: 1px solid #eaf2f8;
+            color: #fff;
+            background: none;
+          }
+          
+          &.signUp {
+            background: #9bf526;
+            color: #222325;
+          }
+        }
+      }
+    }
+  }
+
+  // Pantallas extra grandes (1200px+)
+  @media (min-width: 1200px) {
+    padding: 2rem 10rem;
+    
+    .desktop-nav-container {
+      display: flex !important;
+    }
+    
+    .mobile-nav-container {
+      display: none !important;
+    }
+    
+    .hamburger-btn {
+      display: none !important;
+    }
+  }
+
+  // Pantallas grandes (1025px - 1199px)
+  @media (min-width: 1025px) and (max-width: 1199px) {
+    padding: 2rem 8rem;
+    
+    .desktop-nav-container {
+      display: flex !important;
+    }
+    
+    .mobile-nav-container {
+      display: none !important;
+    }
+    
+    .hamburger-btn {
+      display: none !important;
+    }
+  }
+
+  // Pantallas lg (1024px) - punto de quiebre
+  @media (max-width: 1024px) {
+    padding: 1.5rem 2rem;
+    
+    // Ocultar contenedor desktop
+    .desktop-nav-container {
+      display: none !important;
+    }
+    
+    // Mostrar contenedor móvil
+    .mobile-nav-container {
+      display: flex !important;
+    }
+  }
+
+  // Pantallas md (768px - 1023px)
+  @media (min-width: 768px) and (max-width: 1023px) {
+    padding: 1.5rem 2rem;
+    
+    .desktop-nav-container {
+      display: none !important;
+    }
+    
+    .mobile-nav-container {
+      display: flex !important;
+    }
+  }
+
+  // Pantallas pequeñas (767px y menores)
+  @media (max-width: 767px) {
+    padding: 1rem 1.5rem;
+    
+    .desktop-nav-container {
+      display: none !important;
+    }
+    
+    .mobile-nav-container {
+      display: flex !important;
+    }
+    
+    .mobile-nav-container .logo {
+      width: 15%;
+    }
+  }
+
+  // Pantallas extra pequeñas (480px y menores)
+  @media (max-width: 480px) {
+    padding: 1rem;
+    
+    .desktop-nav-container {
+      display: none !important;
+    }
+    
+    .mobile-nav-container {
+      display: flex !important;
+    }
+    
+    .mobile-nav-container .logo {
+      width: 20%;
     }
   }
 }

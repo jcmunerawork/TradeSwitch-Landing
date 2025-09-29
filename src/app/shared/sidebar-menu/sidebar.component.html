@@ -2,37 +2,89 @@
   class="sidebar d-flex regularText justify-between items-center"
   [class.scrolled]="isScrolled"
 >
-  <div class="logo" routerLink="/">
-    <img src="assets/logo.png" alt="" />
+
+<!-- Contenedor del menú desktop -->
+  <div class="desktop-nav-container">
+    <div class="logo" routerLink="/">
+      <img src="assets/logo.png" alt="" />
+    </div>
+
+    <ul class="menu desktop-menu m-0 d-flex items-center">
+      <li class="menu-link">
+        <a routerLink="/how-it-works" routerLinkActive="active">How it works</a>
+      </li>
+
+      <li class="menu-link">
+        <a routerLink="/plans" routerLinkActive="active">Plans</a>
+      </li>
+
+      <li class="menu-link">
+        <a routerLink="/blog" routerLinkActive="active">Blog</a>
+      </li>
+
+      <li class="menu-link">
+        <a routerLink="/faq" routerLinkActive="active">FAQ</a>
+      </li>
+      <li class="menu-link">
+        <a routerLink="/about-us" routerLinkActive="active">About Us</a>
+      </li>
+    </ul>
+
+    <div class="access-buttons desktop-buttons d-flex items-center">
+      <button class="access-btn regularText login" (click)="navigateToLogin()">
+        Login
+      </button>
+      <button class="access-btn regularText signUp" (click)="goToSignUp()">
+        Sign Up
+      </button>
+    </div>
   </div>
 
-  <ul class="menu m-0 d-flex items-center">
-    <li class="menu-link">
-      <a routerLink="/how-it-works" routerLinkActive="active">How it works</a>
-    </li>
-
-    <li class="menu-link">
-      <a routerLink="/plans" routerLinkActive="active">Plans</a>
-    </li>
-
-    <li class="menu-link">
-      <a routerLink="/blog" routerLinkActive="active">Blog</a>
-    </li>
-
-    <li class="menu-link">
-      <a routerLink="/faq" routerLinkActive="active">FAQ</a>
-    </li>
-    <li class="menu-link">
-      <a routerLink="/about-us" routerLinkActive="active">About Us</a>
-    </li>
-  </ul>
-
-  <div class="access-buttons d-flex items-center">
-    <button class="access-btn regularText login" (click)="navigateToLogin()">
-      Login
+  <div class="mobile-nav-container">
+    <div class="logo" routerLink="/">
+      <img src="assets/logo.png" alt="" />
+    </div>
+    <!-- Botón hamburguesa para móvil -->
+    <button class="hamburger-btn" (click)="toggleMenu()" [class.active]="isMenuOpen">
+      <span></span>
+      <span></span>
+      <span></span>
     </button>
-    <button class="access-btn regularText signUp" (click)="goToSignUp()">
-      Sign Up
-    </button>
+  </div>
+
+
+  <!-- Menú lateral móvil -->
+  <div class="mobile-menu" [class.open]="isMenuOpen">
+    <div class="mobile-menu-content">
+      <ul class="mobile-menu-list">
+        <li class="menu-link">
+          <a routerLink="/how-it-works" routerLinkActive="active" (click)="closeMenu()">How it works</a>
+        </li>
+
+        <li class="menu-link">
+          <a routerLink="/plans" routerLinkActive="active" (click)="closeMenu()">Plans</a>
+        </li>
+
+        <li class="menu-link">
+          <a routerLink="/blog" routerLinkActive="active" (click)="closeMenu()">Blog</a>
+        </li>
+
+        <li class="menu-link">
+          <a routerLink="/faq" routerLinkActive="active" (click)="closeMenu()">FAQ</a>
+        </li>
+        <li class="menu-link">
+          <a routerLink="/about-us" routerLinkActive="active" (click)="closeMenu()">About Us</a>
+        </li>
+      </ul>
+
+      <div class="mobile-access-buttons d-flex flex-col items-center">
+        <button class="access-btn regularText login" (click)="navigateToLogin(); closeMenu()">
+          Login
+        </button>
+        <button class="access-btn regularText signUp" (click)="goToSignUp(); closeMenu()">
+          Sign Up
+        </button>
+      </div>
+    </div>
   </div>
 </nav>
