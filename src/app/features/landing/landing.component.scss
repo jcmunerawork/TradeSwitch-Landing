@@ -2,9 +2,20 @@
   gap: 64px;
   align-self: stretch;
   padding: 8rem 10rem;
+
+  // Responsive para móvil
+  @media (max-width: 768px) {
+    gap: 32px;
+    padding: 4.5rem 1rem;
+  }
   .banner {
     align-self: stretch;
     gap: 64px;
+
+    @media (max-width: 768px) {
+      gap: 32px;
+    }
+
     .banner-actions {
       gap: 1.25rem;
       .bannerTitle {
@@ -13,6 +24,12 @@
         color: #fff;
         span {
           color: #5186e4;
+        }
+
+        @media (max-width: 768px) {
+          width: 100%;
+          font-size: 2rem;
+          line-height: 1.2;
         }
       }
     }
@@ -28,6 +45,18 @@
         img {
           width: 100%;
           height: auto;
+        }
+      }
+
+      @media (max-width: 768px) {
+        gap: 1rem;
+        p {
+          width: 100%;
+          font-size: 0.9rem;
+        }
+        figure {
+          width: 100%;
+          max-width: 20rem;
         }
       }
     }
@@ -56,6 +85,18 @@
       color: #9bf526;
       background: rgba(188, 254, 99, 0.1);
     }
+
+    @media (max-width: 768px) {
+      flex-direction: column;
+      width: 100%;
+      gap: 0.5rem;
+      
+      button {
+        width: 100%;
+        padding: 0.75rem;
+        font-size: 0.9rem;
+      }
+    }
   }
 
   .landing-signUp-buttons,
@@ -70,6 +111,38 @@
     text-align: center;
     .landing-works-titles {
       gap: 0.625rem;
+    }
+
+    @media (max-width: 768px) {
+      gap: 24px;
+    }
+
+    .landing-works-content {
+      @media (max-width: 768px) {
+        flex-direction: column;
+        gap: 2rem;
+        align-items: center;
+      }
+    }
+
+    .landing-works-step {
+      @media (max-width: 768px) {
+        width: 100%;
+        max-width: 20rem;
+        
+        h3 {
+          font-size: 1.1rem;
+          margin-bottom: 1rem;
+        }
+        
+        figure {
+          width: 100%;
+          img {
+            width: 100%;
+            height: auto;
+          }
+        }
+      }
     }
   }
 
@@ -92,6 +165,45 @@
         }
       }
     }
+
+    @media (max-width: 768px) {
+      gap: 24px;
+      
+      .discover-content {
+        gap: 2rem;
+        
+        .discover-item {
+          flex-direction: column;
+          align-items: center;
+          text-align: center;
+          gap: 1rem;
+          
+          .item-text {
+            width: 100%;
+            gap: 1rem;
+            
+            h4 {
+              font-size: 1.2rem;
+            }
+            
+            p {
+              font-size: 0.9rem;
+              line-height: 1.4;
+            }
+          }
+          
+          figure {
+            width: 100%;
+            max-width: 18rem;
+            
+            img {
+              width: 100%;
+              height: auto;
+            }
+          }
+        }
+      }
+    }
   }
 
   .landing-signUp {
@@ -99,6 +211,16 @@
     gap: 3.75rem;
     h2 {
       width: 70%;
+    }
+
+    @media (max-width: 768px) {
+      gap: 2rem;
+      
+      h2 {
+        width: 100%;
+        font-size: 1.5rem;
+        line-height: 1.3;
+      }
     }
   }
 
@@ -152,6 +274,58 @@
           width: 100%;
           span {
             font-size: 1.5rem;
+          }
+        }
+      }
+    }
+
+    @media (max-width: 768px) {
+      gap: 24px;
+      
+      .landing-testimonials-title {
+        h3 {
+          font-size: 1.5rem;
+        }
+        
+        p {
+          font-size: 0.9rem;
+        }
+      }
+      
+      .landing-testimonials-content {
+        padding-top: 1rem;
+        
+        .landing-testimonial-item {
+          min-width: 18rem;
+          min-height: 14rem;
+          padding: 1rem 1.25rem 1.5rem 1.25rem;
+          gap: 1.5rem;
+          
+          .testimonial-avatar-data {
+            figure {
+              width: 3.5rem;
+            }
+          }
+          
+          .testimonialText {
+            font-size: 0.9rem;
+            line-height: 1.4;
+          }
+          
+          .testimonial-user {
+            .avatar-info {
+              h4 {
+                font-size: 0.9rem;
+              }
+              
+              p {
+                font-size: 0.8rem;
+              }
+            }
+            
+            span {
+              font-size: 1.2rem;
+            }
           }
         }
       }

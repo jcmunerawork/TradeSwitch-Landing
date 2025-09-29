@@ -2,6 +2,18 @@
   gap: 64px;
   align-self: stretch;
   padding: 8rem 10rem;
+
+  // Responsive para tablet (769px - 1024px)
+  @media (min-width: 769px) and (max-width: 1024px) {
+    gap: 48px;
+    padding: 5rem 2rem;
+  }
+
+  // Responsive para móvil
+  @media (max-width: 768px) {
+    gap: 32px;
+    padding: 4.5rem 1rem;
+  }
   .faq-header {
     align-self: stretch;
     gap: 0.62rem;
@@ -30,11 +42,78 @@
         }
       }
     }
+
+    // Responsive para tablet
+    @media (min-width: 769px) and (max-width: 1024px) {
+      gap: 1rem;
+      
+      .faqTitle {
+        font-size: 2.5rem;
+      }
+      
+      .faq-categories {
+        gap: 0.5rem;
+        flex-wrap: wrap;
+        justify-content: center;
+        
+        .category {
+          font-size: 0.9rem;
+          padding: 0.5rem 1rem;
+        }
+      }
+    }
+
+    // Responsive para móvil
+    @media (max-width: 768px) {
+      gap: 1.5rem;
+      padding: 0 1rem;
+      
+      .faqTitle {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+      }
+      
+      .faq-categories {
+        gap: 0.5rem;
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 100%;
+        overflow-x: auto;
+        padding-bottom: 0.5rem;
+        
+        .category {
+          white-space: nowrap;
+          font-size: 0.9rem;
+          padding: 0.5rem 1rem;
+        }
+      }
+    }
   }
 
   .faq-signUp {
     text-align: center;
     gap: 3.75rem;
+
+    // Responsive para tablet
+    @media (min-width: 769px) and (max-width: 1024px) {
+      gap: 2.5rem;
+      
+      h2 {
+        font-size: 2.2rem;
+      }
+    }
+
+    // Responsive para móvil
+    @media (max-width: 768px) {
+      gap: 2rem;
+      padding: 0 1rem;
+      
+      h2 {
+        font-size: 1.8rem;
+        line-height: 1.3;
+        margin-bottom: 1rem;
+      }
+    }
   }
 
   .faq-signUp-buttons {
@@ -60,26 +139,111 @@
       color: #9bf526;
       background: rgba(188, 254, 99, 0.1);
     }
+
+    // Responsive para tablet
+    @media (min-width: 769px) and (max-width: 1024px) {
+      button {
+        width: 10rem;
+        padding: 0.7rem;
+        font-size: 0.95rem;
+      }
+    }
+
+    // Responsive para móvil
+    @media (max-width: 768px) {
+      width: 100%;
+      
+      button {
+        width: 100%;
+        padding: 0.8rem;
+        font-size: 0.95rem;
+      }
+    }
   }
 }
 
 .faq-list {
   width: 45rem;
+
+  // Responsive para tablet
+  @media (min-width: 769px) and (max-width: 1024px) {
+    width: 100%;
+    max-width: 40rem;
+  }
+
+  // Responsive para móvil
+  @media (max-width: 768px) {
+    width: 100%;
+    padding: 0 1rem;
+  }
 }
+
 .faq-item {
   width: 100%;
   border-bottom: 1px solid #282726;
   padding: 1rem 0;
+
+  // Responsive para tablet
+  @media (min-width: 769px) and (max-width: 1024px) {
+    padding: 0.8rem 0;
+  }
+
+  // Responsive para móvil
+  @media (max-width: 768px) {
+    padding: 0.8rem 0;
+  }
 }
+
 .faq-question {
   cursor: pointer;
+
+  // Responsive para tablet
+  @media (min-width: 769px) and (max-width: 1024px) {
+    span {
+      font-size: 0.95rem;
+    }
+  }
+
+  // Responsive para móvil
+  @media (max-width: 768px) {
+    span {
+      font-size: 0.9rem;
+      line-height: 1.4;
+    }
+  }
 }
+
 .faq-icon {
   font-weight: 500;
   font-size: 1.2em;
   align-self: center;
+
+  // Responsive para tablet
+  @media (min-width: 769px) and (max-width: 1024px) {
+    font-size: 1.1em;
+  }
+
+  // Responsive para móvil
+  @media (max-width: 768px) {
+    font-size: 1em;
+  }
 }
+
 .faq-answer {
   margin: 0.5em 0 0 0;
   line-height: normal;
+
+  // Responsive para tablet
+  @media (min-width: 769px) and (max-width: 1024px) {
+    margin: 0.4em 0 0 0;
+    font-size: 0.9rem;
+    line-height: 1.4;
+  }
+
+  // Responsive para móvil
+  @media (max-width: 768px) {
+    margin: 0.4em 0 0 0;
+    font-size: 0.85rem;
+    line-height: 1.4;
+  }
 }

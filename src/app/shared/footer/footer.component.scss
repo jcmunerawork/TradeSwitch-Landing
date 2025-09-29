@@ -1,8 +1,14 @@
 .tradeswitch-footer {
+  display: flex;
   background-color: #161719;
   padding: 2rem 0 1rem 0;
   width: 100%;
   box-shadow: 0 -2px 16px rgba(31, 50, 70, 0.1);
+
+  // Ocultar footer en pantallas lg y mayores (1024px+)
+  @media (max-width: 1024px) {
+    display: none !important;
+  }
 
   figure {
     width: 10%;

@@ -11,6 +11,7 @@ import { navigateToSignUp } from '../../features/utils/navigate.utils';
 })
 export class Sidebar {
   isScrolled = false;
+  isMenuOpen = false;
 
   constructor(private router: Router) {}
 
@@ -28,5 +29,13 @@ export class Sidebar {
 
   goToSignUp() {
     navigateToSignUp();
+  }
+
+  toggleMenu() {
+    this.isMenuOpen = !this.isMenuOpen;
+  }
+
+  closeMenu() {
+    this.isMenuOpen = false;
   }
 }
