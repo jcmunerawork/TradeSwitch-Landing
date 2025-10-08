@@ -38,7 +38,7 @@ jobs:
       - name: 📤 Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: dist/tradeSwitch-Landing/browser
+          path: dist/tradeSwitch-Landing
 
       - name: ⚙️ Setup GitHub Pages
         uses: actions/configure-pages@v4
