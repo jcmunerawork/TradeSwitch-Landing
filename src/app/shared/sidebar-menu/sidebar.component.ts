@@ -22,7 +22,7 @@ export class Sidebar {
 
   navigateToLogin() {
     window.open(
-      'https://tradeswitch.io/login',
+      'https://app.tradeswitch.io/login',
       '_blank'
     );
   }
