@@ -22,7 +22,7 @@ export class Sidebar {
 
   navigateToLogin() {
     window.open(
-      'https://jcmunerawork.github.io/tradeManager-web/login',
+      'https://tradeswitch.io/login',
       '_blank'
     );
   }

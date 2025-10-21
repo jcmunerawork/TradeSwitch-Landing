@@ -1,6 +1,6 @@
 export function navigateToSignUp() {
   window.open(
-    'https://jcmunerawork.github.io/tradeManager-web/signup',
+    'https://tradeswitch.io/signup',
     '_blank'
   );
 }
