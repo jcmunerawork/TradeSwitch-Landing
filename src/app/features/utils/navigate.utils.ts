@@ -1,6 +1,6 @@
 export function navigateToSignUp() {
   window.open(
-    'https://tradeswitch.io/signup',
+    'https://app.tradeswitch.io/signup',
     '_blank'
   );
 }
