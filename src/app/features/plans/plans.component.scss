@@ -1,7 +1,7 @@
 .plans {
   gap: 64px;
   align-self: stretch;
-  padding: 8rem 10rem;
+  padding: 8rem 6rem;
 
   // Responsive para tablet (769px - 1024px)
   @media (min-width: 769px) and (max-width: 1024px) {
@@ -55,11 +55,12 @@
   }
   .plans-list {
     align-content: flex-start;
-    justify-content: space-between;
+    justify-content: start;
     flex-wrap: wrap;
+    gap: 1rem;
 
     // Responsive para tablet
-    @media (min-width: 769px) and (max-width: 1024px) {
+    @media (min-width: 481px) and (max-width: 768px) {
       flex-direction: column;
       gap: 2rem;
       align-items: center;
@@ -76,6 +77,7 @@
     .plan-card {
       gap: 32px;
       width: 32%;
+      min-width: 20rem;
       min-height: 27rem;
       border-radius: 0.5rem;
       border: 0.5px solid #4a4a4a;
@@ -95,9 +97,10 @@
       }
 
       // Responsive para tablet
-      @media (min-width: 769px) and (max-width: 1024px) {
+      @media (min-width: 481px) and (max-width: 768px) {
         width: 100%;
-        max-width: 25rem;
+        min-width: 22rem;
+        max-width: 28rem;
         min-height: auto;
         gap: 1.5rem;
         padding: 1.5rem;
@@ -106,6 +109,7 @@
       // Responsive para móvil
       @media (max-width: 768px) {
         width: 100%;
+        min-width: 18rem;
         min-height: auto;
         gap: 1.2rem;
         padding: 1.2rem;
@@ -115,7 +119,7 @@
         gap: 1rem;
 
         // Responsive para tablet
-        @media (min-width: 769px) and (max-width: 1024px) {
+        @media (min-width: 481px) and (max-width: 768px) {
           gap: 0.8rem;
         }
 
@@ -130,7 +134,7 @@
           border-radius: 8.235px;
 
           // Responsive para tablet
-          @media (min-width: 769px) and (max-width: 1024px) {
+          @media (min-width: 481px) and (max-width: 768px) {
             padding: 0.8rem;
           }
 
@@ -152,7 +156,7 @@
             border-radius: 15px;
 
             // Responsive para tablet
-            @media (min-width: 769px) and (max-width: 1024px) {
+            @media (min-width: 481px) and (max-width: 768px) {
               width: 40px;
               height: 40px;
               border-width: 4px;
@@ -172,7 +176,7 @@
             border-radius: 50%;
 
             // Responsive para tablet
-            @media (min-width: 769px) and (max-width: 1024px) {
+            @media (min-width: 481px) and (max-width: 768px) {
               width: 40px;
               height: 40px;
               border-width: 4px;
@@ -187,13 +191,47 @@
           }
         }
 
+        .plan-name-and-popular {
+          gap: 1rem;
+          align-items: center;
+          justify-content: space-between;
+          width: 100%;
+          min-width: 0;
+          flex: 1;
+
+          .planName {
+            color: #fff;
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin: 0;
+          }
+
+          // Responsive para tablet
+          @media (min-width: 481px) and (max-width: 768px) {
+            gap: 0.8rem;
+          }
+
+          // Responsive para móvil
+          @media (max-width: 768px) {
+            gap: 0.6rem;
+            flex-direction: column;
+            align-items: flex-start;
+          }
+        }
+
+        .subtitle {
+          color: #fff;
+          font-size: 1.2rem;
+          margin: 0;
+        }
+
         .popular {
           background: rgba(20, 174, 92, 0.15);
           border-radius: 0.25rem;
           color: #14ae5c;
 
           // Responsive para tablet
-          @media (min-width: 769px) and (max-width: 1024px) {
+          @media (min-width: 481px) and (max-width: 768px) {
             padding: 0.3rem 0.5rem;
             font-size: 0.8rem;
           }
@@ -211,7 +249,7 @@
         width: 100%;
 
         // Responsive para tablet
-        @media (min-width: 769px) and (max-width: 1024px) {
+        @media (min-width: 481px) and (max-width: 768px) {
           margin: 1rem 0;
         }
 
@@ -228,7 +266,7 @@
           width: 100%;
 
           // Responsive para tablet
-          @media (min-width: 769px) and (max-width: 1024px) {
+          @media (min-width: 481px) and (max-width: 768px) {
             gap: 1.5rem;
           }
 
@@ -241,7 +279,7 @@
             width: 100%;
 
             // Responsive para tablet
-            @media (min-width: 769px) and (max-width: 1024px) {
+            @media (min-width: 481px) and (max-width: 768px) {
               font-size: 0.9rem;
             }
 
@@ -258,7 +296,7 @@
         width: 100%;
 
         // Responsive para tablet
-        @media (min-width: 769px) and (max-width: 1024px) {
+        @media (min-width: 481px) and (max-width: 768px) {
           margin-top: 1rem;
         }
 
