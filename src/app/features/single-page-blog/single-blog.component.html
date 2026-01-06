@@ -85,7 +85,7 @@
       </div>
     </ng-container>
     } @if (selectedBlog?.id === 'account-setup') {
-    <button class="cta-signup btn-primary regularText">Sign up now</button>
+    <button class="cta-signup btn-primary regularText" (click)="goToSignUp()">Sign up now</button>
     }
   </section>
 </div>
@@ -113,10 +113,10 @@
       <img [src]="item.imageUrl" alt="{{ item.title }}" />
     </figure>
     <h2 class="cardTitle color-background mb-10">{{ item.title }}</h2>
-    <p class="blog-description regularText color-background mb-10">
+    <p class="blog-description regularText color-background mb-6">
       {{ item.description }}
     </p>
-    <div class="blog-btns d-flex justify-end">
+    <div class="blog-btns d-flex justify-end mb-10">
       <button
         class="category regularText color-background p-10 d-flex items-center"
         (click)="goToBlog(item.id)"

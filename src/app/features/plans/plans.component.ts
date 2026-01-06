@@ -27,11 +27,12 @@ export const PLANS: PlanCard[] = [
     color: '#4b7ee8',
     features: [
       { label: 'Trading Accounts', value: '1' },
+      { label: 'Strategies', value: '1' },
       { label: 'Consistency Rules', value: 'YES' },
       { label: 'Trading Journal', value: 'YES' },
       { label: 'Live Statistics', value: 'YES' },
     ],
-    cta: 'Get Starter Now',
+    cta: 'Get Started Now',
   },
   {
     name: 'Starter',
@@ -41,11 +42,12 @@ export const PLANS: PlanCard[] = [
     color: '#4b7ee8',
     features: [
       { label: 'Trading Accounts', value: '2' },
+      { label: 'Strategies', value: '3' },
       { label: 'Consistency Rules', value: 'YES' },
       { label: 'Trading Journal', value: 'YES' },
       { label: 'Live Statistics', value: 'YES' },
     ],
-    cta: 'Get Starter Now',
+    cta: 'Get Started Now',
   },
   {
     name: 'Pro',
@@ -56,11 +58,12 @@ export const PLANS: PlanCard[] = [
     color: '#d1ff81',
     features: [
       { label: 'Trading Accounts', value: '6' },
+      { label: 'Strategies', value: '8' },
       { label: 'Consistency Rules', value: 'YES' },
       { label: 'Trading Journal', value: 'YES' },
       { label: 'Live Statistics', value: 'YES' },
     ],
-    cta: 'Get Starter Now',
+    cta: 'Get Started Now',
   },
 ];
 

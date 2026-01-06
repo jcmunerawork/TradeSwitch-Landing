@@ -97,14 +97,23 @@
       width: 5.625rem;
       border: none;
       cursor: pointer;
+      transition: background 0.2s;
       &.login {
         border: 1px solid #eaf2f8;
         color: #fff;
         background: none;
+        transition: background 0.2s;
+        &:hover {
+          background: rgba(255, 255, 255, 0.1);
+        }
       }
       &.signUp {
         background: #9bf526;
         color: #222325;
+        transition: background 0.2s;
+        &:hover {
+          background: rgb(104, 141, 34);
+        }
       }
     }
   }

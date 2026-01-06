@@ -312,6 +312,11 @@
           border: none;
           width: 100%;
           padding: 0.625rem;
+          transition: background 0.2s;
+
+          &:hover {
+            background: rgb(104, 141, 34);
+          }
 
           // Responsive para tablet
           @media (min-width: 769px) and (max-width: 1024px) {

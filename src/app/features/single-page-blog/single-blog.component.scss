@@ -168,6 +168,10 @@
     .btn-primary {
       color: #222325;
       background: #9bf526;
+      transition: background 0.2s;
+      &:hover {
+        background: rgb(104, 141, 34);
+      }
     }
 
     // Responsive para tablet
@@ -336,6 +340,10 @@
   .btn-primary {
     color: #222325;
     background: #9bf526;
+    transition: background 0.2s;
+    &:hover {
+      background: rgb(104, 141, 34);
+    }
   }
 
   // Responsive para tablet
@@ -406,7 +414,7 @@
 
   .blog-card {
     gap: 1rem;
-    max-height: 31rem;
+    max-height: 33rem;
     border-radius: 0.5rem;
     border: 0.5px solid #4a4a4a;
     background: radial-gradient(
