@@ -207,6 +207,14 @@
 .faq-question {
   cursor: pointer;
 
+  .subtitle {
+    color: #5186e3;
+    transition: color 0.2s;
+    &:hover {
+      color: #3054c5;
+    }
+  }
+  
   // Responsive para tablet
   @media (min-width: 769px) and (max-width: 1024px) {
     span {
@@ -227,6 +235,12 @@
   font-weight: 500;
   font-size: 1.2em;
   align-self: center;
+  transition: background 0.2s;
+  color: #fff;
+
+  &:hover {
+    color: #737272;
+  }
 
   // Responsive para tablet
   @media (min-width: 769px) and (max-width: 1024px) {

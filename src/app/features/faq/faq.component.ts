@@ -5,7 +5,7 @@ export enum Category {
   GettingStarted = 'Getting Started',
   Account = 'Account and Technical Issues',
   Pricing = 'Pricing',
-  Terms = 'Terms and Policy',
+  //Terms = 'Terms and Policy',
 }
 
 export interface FaqItem {

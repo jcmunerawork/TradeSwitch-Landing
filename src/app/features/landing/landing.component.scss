@@ -77,6 +77,11 @@
     .btn-primary {
       color: #222325;
       background: #9bf526;
+      transition: background 0.2s;
+    }
+
+    .btn-primary:hover {
+      background: rgb(104, 141, 34);
     }
 
     .btn-secondary {
@@ -84,6 +89,11 @@
       border: 1px solid #9bf526;
       color: #9bf526;
       background: rgba(188, 254, 99, 0.1);
+      transition: background 0.2s;
+    }
+
+    .btn-secondary:hover {
+      background: rgba(188, 254, 99, 0.3);
     }
 
     @media (max-width: 768px) {

@@ -21,8 +21,8 @@
         class="faq-question d-flex justify-between"
         (click)="toggleFaq($index)"
       >
-        <span class="color-secondary-500 subtitle">{{ faq.question }}</span>
-        <span class="faq-icon color-background">{{
+        <span class="subtitle">{{ faq.question }}</span>
+        <span class="faq-icon">{{
           openIndex === $index ? "−" : "+"
         }}</span>
       </div>
