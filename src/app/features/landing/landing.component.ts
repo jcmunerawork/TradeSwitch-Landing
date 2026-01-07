@@ -54,7 +54,7 @@ export const testimonialData = [
     rating: 5,
     text: 'It saved me so much time today, keep it up!',
     name: 'Viviana Pérez',
-    position: 'Data Analist',
+    position: 'Data Analyst',
   },
   {
     avatar: 'assets/img/avatars/avatar-3.webp',
