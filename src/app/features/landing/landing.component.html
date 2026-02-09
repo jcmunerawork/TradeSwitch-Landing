@@ -6,15 +6,13 @@
         <button class="btn-primary regularText" (click)="goToSignUp()">
           Sign up
         </button>
-        <button class="btn-secondary regularText" (click)="downloadPluginZip()">
+        <button class="btn-secondary regularText" (click)="goToGoogleWebStore()">
           Download Chrome Extension
         </button>
       </div>
     </div>
 
-    <div
-      class="banner-main d-flex flex-col justify-center items-center regularText bannerSubtitle color-text-gray"
-    >
+    <div class="banner-main d-flex flex-col justify-center items-center regularText bannerSubtitle color-text-gray">
       <p>
         Users on average see an
         <span class="color-background">increase of 35% in profitability</span>
@@ -48,10 +46,7 @@
       <button class="btn-primary regularText" (click)="goToSignUp()">
         Sign up
       </button>
-      <button
-        class="btn-secondary regularText"
-        [routerLink]="['/how-it-works']"
-      >
+      <button class="btn-secondary regularText" [routerLink]="['/how-it-works']">
         Learn more
       </button>
     </div>
@@ -94,18 +89,10 @@
         Don't just hear it from us, hear it from real users.
       </p>
     </div>
-    <div
-      #testimonialsContent
-      class="landing-testimonials-content d-flex items-center"
-      (mousedown)="startDrag($event)"
-      (mousemove)="onDrag($event)"
-      (mouseup)="stopDrag()"
-      (mouseleave)="stopDrag()"
-    >
+    <div #testimonialsContent class="landing-testimonials-content d-flex items-center" (mousedown)="startDrag($event)"
+      (mousemove)="onDrag($event)" (mouseup)="stopDrag()" (mouseleave)="stopDrag()">
       > @for (testimonial of testimonialData; track $index) {
-      <div
-        class="landing-testimonial-item d-flex flex-col justify-center items-start"
-      >
+      <div class="landing-testimonial-item d-flex flex-col justify-center items-start">
         <div class="testimonial-avatar-data d-flex justify-end">
           <figure>
             <img [src]="testimonial.avatar" alt="" />
@@ -113,10 +100,7 @@
           <div class="testimonial-avatar-rating">
             @for (item of [].constructor(testimonial.rating); track $index) {
             <ng-container>
-              <span
-                class="icon-star color-yellow px-2"
-                [ngClass]="{ filled: $index < testimonial.rating }"
-              ></span>
+              <span class="icon-star color-yellow px-2" [ngClass]="{ filled: $index < testimonial.rating }"></span>
             </ng-container>
             }
           </div>

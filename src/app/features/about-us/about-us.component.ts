@@ -1,7 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
-import { downloadZip, navigateToSignUp } from '../utils/navigate.utils';
+import { downloadZip, navigateToGoogleWebStore, navigateToSignUp } from '../utils/navigate.utils';
 
 const landingSteps = [
   {
@@ -76,7 +76,7 @@ export class AboutUsComponent {
   traderCards = TRADER_CARDS;
   features = FEATURES;
 
-  constructor(private router: Router) {}
+  constructor(private router: Router) { }
 
   goToSignUp() {
     navigateToSignUp();
@@ -84,6 +84,10 @@ export class AboutUsComponent {
 
   goToHowItWorks() {
     this.router.navigate(['/how-it-works']);
+  }
+
+  goToGoogleWebStore() {
+    navigateToGoogleWebStore();
   }
 
   downloadPluginZip() {

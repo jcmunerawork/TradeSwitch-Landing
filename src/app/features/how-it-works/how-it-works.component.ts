@@ -2,7 +2,7 @@ import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { RouterLink, RouterLinkActive } from '@angular/router';
 import { Router } from 'express';
-import { downloadZip, navigateToSignUp } from '../utils/navigate.utils';
+import { downloadZip, navigateToGoogleWebStore, navigateToSignUp } from '../utils/navigate.utils';
 
 const landingSteps = [
   {
@@ -29,11 +29,16 @@ const landingSteps = [
 export class HowItWorks {
   landingSteps = landingSteps;
 
-  constructor() {}
+  constructor() { }
 
   goToSignUp() {
     navigateToSignUp();
   }
+
+  goToGoogleWebStore() {
+    navigateToGoogleWebStore();
+  }
+
   downloadPluginZip() {
     downloadZip();
   }

@@ -23,3 +23,10 @@ export function downloadZip() {
       alert('Hubo un error al descargar el archivo.');
     });
 }
+
+export function navigateToGoogleWebStore() {
+  window.open(
+    'https://chromewebstore.google.com/detail/trade-switch/bpkodfagpblehloponilbaoopbmomecn',
+    '_blank'
+  );
+}

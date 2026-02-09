@@ -2,7 +2,7 @@ import { CommonModule } from '@angular/common';
 import { Component, ElementRef, ViewChild } from '@angular/core';
 import { RouterLink, RouterLinkActive } from '@angular/router';
 import { Router } from 'express';
-import { downloadZip, navigateToSignUp } from '../utils/navigate.utils';
+import { downloadZip, navigateToGoogleWebStore, navigateToSignUp } from '../utils/navigate.utils';
 
 const landingSteps = [
   {
@@ -83,7 +83,7 @@ export class Landing {
   startX = 0;
   scrollLeft = 0;
 
-  constructor() {}
+  constructor() { }
 
   startDrag(event: MouseEvent) {
     this.isDragging = true;
@@ -106,6 +106,10 @@ export class Landing {
 
   goToSignUp() {
     navigateToSignUp();
+  }
+
+  goToGoogleWebStore() {
+    navigateToGoogleWebStore();
   }
 
   downloadPluginZip() {

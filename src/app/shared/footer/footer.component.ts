@@ -3,6 +3,7 @@ import { Component } from '@angular/core';
 import { RouterLink, RouterLinkActive } from '@angular/router';
 import {
   downloadZip,
+  navigateToGoogleWebStore,
   navigateToSignUp,
 } from '../../features/utils/navigate.utils';
 
@@ -20,13 +21,13 @@ export const TRADE_SWITCH_FOOTER = {
       label: 'Sign Up',
       style: 'btn-primary',
       url: '/signup',
-      action: () => {},
+      action: () => { },
     },
     {
       label: 'Download Chrome Extension',
       style: 'btn-secondary',
       url: '/download',
-      action: () => {},
+      action: () => { },
     },
   ],
   copyright: `© ${new Date().getFullYear()} TradeSwitch. All rights reserved.`,
@@ -46,7 +47,7 @@ export const TRADE_SWITCH_FOOTER = {
 export class Footer {
   isScrolled = false;
 
-  constructor() {}
+  constructor() { }
 
   tradeSwitchFooter = TRADE_SWITCH_FOOTER;
 
@@ -55,12 +56,16 @@ export class Footer {
       this.goToSignUp();
     };
     this.tradeSwitchFooter.cta[1].action = () => {
-      this.downloadPluginZip();
+      this.goToGoogleWebStore();
     };
   }
 
   goToSignUp() {
     navigateToSignUp();
+  }
+
+  goToGoogleWebStore() {
+    navigateToGoogleWebStore();
   }
 
   downloadPluginZip() {
