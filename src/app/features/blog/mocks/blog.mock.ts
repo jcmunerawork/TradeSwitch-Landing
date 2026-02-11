@@ -27,7 +27,7 @@ export const BLOG_CARDS = [
   },
   {
     id: 'new-trade-switch',
-    title: 'The all new Trade Switch',
+    title: 'The all new TradeSwitch',
     description:
       'Discover the all-new TradeSwitch experience with an upgraded dashboard, smarter trading tools, and a powerful Chrome extension.',
     imageUrl: 'assets/img/blog/image-fourth-article.webp',
@@ -35,7 +35,7 @@ export const BLOG_CARDS = [
   },
   {
     id: 'trade-switch-vs-none',
-    title: 'Trade Switch vs No Trade Switch',
+    title: 'TradeSwitch vs No TradeSwitch',
     description:
       'Should you trade manually or automate your discipline? Discover why traders using TradeSwitch achieve better results than those trading without it.',
     imageUrl: 'assets/img/blog/image-fifth-article.webp',
@@ -188,7 +188,7 @@ export const BLOGS = [
   },
   {
     id: 'new-trade-switch',
-    title: 'The all new Trade Switch',
+    title: 'The all new TradeSwitch',
     heroImage: 'assets/img/blog/image-fourth-article.webp',
     keywords: [
       'TradeSwitch update',
@@ -228,7 +228,7 @@ export const BLOGS = [
   },
   {
     id: 'trade-switch-vs-none',
-    title: 'Trade Switch vs No Trade Switch',
+    title: 'TradeSwitch vs No TradeSwitch',
     heroImage: 'assets/img/blog/image-fifth-article.webp',
     keywords: [
       'manual trading',
