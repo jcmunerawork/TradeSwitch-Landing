@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { lastValueFrom } from 'rxjs';
 import { EmailService, ContactFormData } from '../../core/services/email.service';
 
 export enum Category {
@@ -191,9 +192,8 @@ export class FaqComponent {
     this.showSuccess = false;
 
     try {
-      // Usar el método mock para desarrollo
-      // Cambia esto por emailService.sendContactEmail() cuando tengas el backend configurado
-      await this.emailService.sendContactEmailMock(this.contactForm);
+      // Usar el método real de EmailJS
+      await lastValueFrom(this.emailService.sendContactEmail(this.contactForm));
 
       this.isLoading = false;
       this.showSuccess = true;

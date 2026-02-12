@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import { environment } from '../../../environments/environment';
 
 export interface ContactFormData {
     email: string;
@@ -35,10 +36,12 @@ export interface ContactFormData {
 })
 export class EmailService {
     // ===== CONFIGURACIÓN EMAILJS =====
-    // Reemplaza estos valores con tus credenciales de EmailJS
-    private readonly EMAILJS_SERVICE_ID = 'YOUR_SERVICE_ID';
-    private readonly EMAILJS_TEMPLATE_ID = 'YOUR_TEMPLATE_ID';
-    private readonly EMAILJS_PUBLIC_KEY = 'YOUR_PUBLIC_KEY';
+
+    // Las credenciales se cargan desde src/environments/environment.ts
+    // (Generado automáticamente desde .env al iniciar la app)
+    private readonly EMAILJS_SERVICE_ID = environment.emailjs.serviceId;
+    private readonly EMAILJS_TEMPLATE_ID = environment.emailjs.templateId;
+    private readonly EMAILJS_PUBLIC_KEY = environment.emailjs.publicKey;
     private readonly EMAILJS_URL = 'https://api.emailjs.com/api/v1.0/email/send';
 
     // ===== O CONFIGURACIÓN BACKEND API =====
@@ -64,7 +67,7 @@ export class EmailService {
             }
         };
 
-        return this.http.post(this.EMAILJS_URL, emailData);
+        return this.http.post(this.EMAILJS_URL, emailData, { responseType: 'text' });
 
         // ===== ALTERNATIVA: Backend API propio =====
         // Descomenta estas líneas si prefieres usar tu propio backend

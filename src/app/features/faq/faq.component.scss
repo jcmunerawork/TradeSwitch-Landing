@@ -1,3 +1,5 @@
+@use "typography";
+
 .faq {
   gap: 64px;
   align-self: stretch;
@@ -303,6 +305,7 @@
 }
 
 .modal-container {
+  font-family: typography.$font-interface;
   background: radial-gradient(circle at top center,
       rgba(81, 134, 228, 0.15) 0%,
       rgba(81, 134, 228, 0.02) 50%),
