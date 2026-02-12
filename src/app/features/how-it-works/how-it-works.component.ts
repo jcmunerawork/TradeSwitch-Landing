@@ -10,7 +10,7 @@ const landingSteps = [
     img: 'assets/img/landing/first-step.webp',
   },
   {
-    title: '2. Turn on Trade Switch',
+    title: '2. Turn on TradeSwitch',
     img: 'assets/img/landing/second-step.webp',
   },
   {

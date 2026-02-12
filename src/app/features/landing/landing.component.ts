@@ -10,7 +10,7 @@ const landingSteps = [
     img: 'assets/img/landing/first-step.webp',
   },
   {
-    title: '2. Turn on Trade Switch',
+    title: '2. Turn on TradeSwitch',
     img: 'assets/img/landing/second-step.webp',
   },
   {
@@ -38,7 +38,7 @@ export const testimonialData = [
   {
     avatar: 'assets/img/avatars/avatar-4.webp',
     rating: 5,
-    text: 'Trade Switch is just what I was looking for. Nice work on Trade Switch.',
+    text: 'TradeSwitch is just what I was looking for. Nice work on TradeSwitch.',
     name: 'Roger Brown',
     position: 'Customer Web Consultant',
   },

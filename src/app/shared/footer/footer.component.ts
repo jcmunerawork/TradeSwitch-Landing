@@ -14,7 +14,7 @@ export const TRADE_SWITCH_FOOTER = {
     { label: 'Plans', url: '/plans' },
     { label: 'Blog', url: '/blog' },
     { label: 'FAQ', url: '/faq' },
-    { label: 'About Us', url: '/about' },
+    { label: 'About Us', url: '/about-us' },
   ],
   cta: [
     {
